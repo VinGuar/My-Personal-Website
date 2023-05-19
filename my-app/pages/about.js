@@ -1,5 +1,20 @@
-export default function About() {
-    return (
-    <div>About</div>
-    )
-  }
+import Navbar from '../comps/Navbar'
+import Footer from '../comps/Footer'
+import styles from '/styles/About.module.css'
+
+
+const About = () => {
+  return (
+   
+
+    <div>
+      <Navbar />
+      <p className={styles.container}>as</p>
+      <Footer />
+
+    </div>
+
+    );
+}
+ 
+export default About;
