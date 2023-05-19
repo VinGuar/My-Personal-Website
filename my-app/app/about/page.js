@@ -1,5 +1,5 @@
-import Navbar from '../comps/Navbar'
-import Footer from '../comps/Footer'
+import Navbar from '../../comps/Navbar'
+import Footer from '../../comps/Footer'
 import styles from '/styles/About.module.css'
 
 
