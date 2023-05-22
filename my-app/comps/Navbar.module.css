@@ -1,0 +1,27 @@
+.items {
+    padding-right: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-style: bold;
+}
+
+.head {
+    background-color: grey;
+    display: flex;
+    margin: -8px;
+    margin-bottom: 20px;
+    text-align: top;
+    margin-left: 100px;
+
+}
+
+.area {
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: right;
+    padding-bottom: 30px;
+    display: flex;
+
+
+}
