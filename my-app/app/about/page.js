@@ -1,6 +1,6 @@
 import Navbar from '../../comps/Navbar'
 import Footer from '../../comps/Footer'
-import styles from '/styles/About.module.css'
+import styles from '../about/About.module.css'
 
 
 const About = () => {
