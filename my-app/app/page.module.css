@@ -1,4 +1,23 @@
 p.container {
     font-size: 100px;
-    
+    background-color: rgb(45, 45, 45);
+    color: beige;
+
+   
+}
+
+.body1 {
+    background-color: rgb(45, 45, 45);
+    margin: -8px;
+}   
+
+.body2 {
+    padding-top: 300px;
+    margin: -8px;
+    margin-bottom: 0px;
+}
+
+.whole{
+    display: flex;
+    flex-direction: column;
 }

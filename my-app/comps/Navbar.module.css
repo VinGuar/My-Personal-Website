@@ -1,27 +1,48 @@
 .items {
     padding-right: 20px;
-    color: white;
+    color: beige;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     font-style: bold;
+    background-color: rgb(36, 36, 36);
+
+}
+
+.whole {
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    margin: -8px;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-bottom: 10px;
+
+
+}
+
+.left {
+    display: flex;
+    background-color: rgb(36, 36, 36);
+
 }
 
 .head {
-    background-color: grey;
-    display: flex;
-    margin: -8px;
-    margin-bottom: 20px;
-    text-align: top;
-    margin-left: 100px;
-
+    background-color: rgb(36, 36, 36);
+    color: beige;
+    margin-left: 20px;
 }
 
-.area {
+.menu {
     padding-left: 20px;
-    padding-top: 10px;
-    text-align: right;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    text-align: center;
     display: flex;
-
+    justify-content: flex-end;
+    background-color: rgb(36, 36, 36);
 
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

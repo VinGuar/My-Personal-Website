@@ -9,11 +9,16 @@ import Footer from '../comps/Footer'
 export default function Home() {
   return (
     <main>
-    <Navbar />
-
-    Read <Link href="/about">this page!</Link>
-    <p className = {styles.container}>hello</p>
-    <Footer />
+      <Navbar />
+      <div className={styles.whole}>
+        <div className={styles.body1}>
+          <p className = {styles.container}>hello</p>
+        </div>
+        <div className={styles.body2}>
+          <p>second</p>
+        </div>
+      </div>
+      <Footer />
 
     </main>
   )

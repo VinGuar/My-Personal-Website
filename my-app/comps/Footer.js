@@ -1,6 +1,8 @@
+import styles from "../comps/Footer.module.css"
+
 const Footer = () => {
     return ( 
-        <div>
+        <div className={styles.whole}>
             Footer!
         </div>
      );
