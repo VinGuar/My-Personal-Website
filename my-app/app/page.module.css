@@ -1,19 +1,17 @@
 p.container {
     font-size: 100px;
-    background-color: rgb(45, 45, 45);
-    color: beige;
+    background-color:  rgb(220, 220, 220);
+    color: rgb(80, 80, 80);
 
    
 }
 
 .body1 {
-    background-color: rgb(45, 45, 45);
-    margin: -8px;
+    background-color:  rgb(0, 220, 220);
 }   
 
 .body2 {
     padding-top: 300px;
-    margin: -8px;
     margin-bottom: 0px;
 }
 
