@@ -1,13 +1,20 @@
 p.container {
-    font-size: 100px;
+    font-size: 40px;
     background-color:  rgb(220, 220, 220);
     color: rgb(80, 80, 80);
-
    
 }
 
 .body1 {
-    background-color:  rgb(0, 220, 220);
+    background-color:  rgb(220, 220, 220);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+
 }   
 
 .body2 {
