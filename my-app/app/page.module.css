@@ -14,15 +14,18 @@ p.container {
     padding-right: 10px;
     text-align: center;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 
 }   
 
 .body2 {
     padding-top: 300px;
     margin-bottom: 0px;
+    background-color: white;
 }
 
 .whole{
     display: flex;
     flex-direction: column;
 }
+
