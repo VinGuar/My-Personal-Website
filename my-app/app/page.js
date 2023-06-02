@@ -19,27 +19,26 @@ export default function Home() {
           <img src="waving4.png" width="400px" height="400px" style={{"margin-top":"0px"}} />
         </div>
 
-        <div id = "About Me" className={styles.about}>
+        <div id = "About" className={styles.about}>
 
           <div className={styles.aboutmain}>
-            <p>About Me!</p>
-            <p>Contact:</p>
-            <p>Email: vincentguarnieri1@gmail.com</p>
-            <p>LinkedIn: Click Here!</p>
+            <p className={styles.holder}>About Me!</p>
+            <p className={styles.holder}>Email: vincentguarnieri1@gmail.com</p>
+            <p className={styles.holder}>LinkedIn: Click Here!</p>
           </div>
 
           <div className={styles.aboutsections}>
             <div className={styles.aboutind}>          
-              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className={styles.aboutpara}>Professional Interests</p>
             </div>
             <div className={styles.aboutind}>          
-              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className={styles.aboutpara}>Hobbies and Passions</p>
             </div>
             <div className={styles.aboutind}>          
-              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className={styles.aboutpara}>Skills</p>
             </div>          
             <div className={styles.aboutind}>          
-              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in cLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumulpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className={styles.aboutpara}>Values</p>
             </div>
           </div>
 

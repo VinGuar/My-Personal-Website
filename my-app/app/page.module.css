@@ -15,6 +15,7 @@ p.container {
     text-align: center;
     flex-wrap: wrap;
     padding-bottom: 50px;
+    padding-top: 90px;
 
 }   
 
@@ -30,39 +31,61 @@ p.container {
 }
 
 .aboutind {
-    margin: 50px;
+    margin: 30px;
     background-color: rgb(31, 31, 31);
-    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
     border-radius: 50px;
     flex: 30%;
-    min-width: 200px;
+    text-align: center;
+    border-style: outset;
+    border-width: 10px;
+
+
 
 }
 
 .aboutsections {
     display: flex;
-    margin: 10px;
+    margin: 30px;
     justify-content: space-evenly;
     flex-wrap: wrap;  
-    background-color: rgb(220, 220, 220);
-    flex: 20%;
-
+    flex: 10%;
 }
 
 
 .aboutmain {
-    padding: 50px;
-    padding-right: 100px;
+    padding: 30px;
+    text-align: center;
+    margin: 30px;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+
+}
+
+.holder {
+    font-size: 20px;
 }
 
 .aboutpara{
     background-color: rgb(31, 31, 31);
-    color: rgb(220, 220, 220);
-    
+    color: rgb(235, 235, 235);
+    font-size: 22px;
+
 }
 
 .projects{
-    
+    padding-top: 300px;
+}
+
+.experience{
+    padding-top: 300px;
+}
+
+.education{
+    padding-top: 300px;
 }
 
 .whole{

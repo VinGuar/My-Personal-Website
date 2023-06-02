@@ -6,12 +6,13 @@ import Link from 'next/link';
 const Navbar = () => {
 
     const handleClick = (num) => {
+      
         console.log('Clicked!');
         if (typeof window !== 'undefined') {
           if (num === 1){
-            document.getElementById('Main').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('Start').scrollIntoView({ behavior: 'smooth'});
           } else if (num === 2){
-            document.getElementById('About Me').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('About').scrollIntoView({ behavior: 'smooth'});
 
           }else if (num === 3){
             document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' });
@@ -30,21 +31,21 @@ const Navbar = () => {
     return ( 
             <nav>
 
-            <main id="Main" className={styles.whole}>
-                <div className={styles.menu}>
+              <main id="Main" className={styles.whole}>
+                  <div className={styles.menu}>
 
-                    <span className={styles.paren}>&#9790;</span>
+                      <span className={styles.paren}>&#9790;</span>
 
-                    <div style={{'cursor':'pointer'}} onClick = {() => handleClick(1)} className = {styles.items}>Home</div>
-                    <div style={{'cursor':'pointer'}} onClick = {() => handleClick(2)} className = {styles.items}>About me</div>
-                    <div style={{'cursor':'pointer'}} onClick = {() => handleClick(3)} className = {styles.items}>Projects</div>
-                    <div style={{'cursor':'pointer'}} onClick = {() => handleClick(4)} className = {styles.items}>Experience</div>
-                    <div style={{'cursor':'pointer'}} onClick = {() => handleClick(5)} className = {styles.items}>Education</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(1)} className = {styles.items}>Home</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(2)} className = {styles.items}>About!</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(3)} className = {styles.items}>Projects</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(4)} className = {styles.items}>Experience</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(5)} className = {styles.items}>Education</div>
 
-                    <span className={styles.paren}>&#9789;</span>
+                      <span className={styles.paren}>&#9789;</span>
 
-                </div>
-            </main>
+                  </div>
+              </main>
             </nav>
 
      );
