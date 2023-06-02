@@ -5,7 +5,7 @@ p.container {
    
 }
 
-.body1 {
+.top {
     background-color:  rgb(220, 220, 220);
     display: flex;
     justify-content: space-evenly;
@@ -18,10 +18,51 @@ p.container {
 
 }   
 
-.body2 {
-    padding-top: 300px;
+.about {
+    padding-bottom: 100px;
     margin-bottom: 0px;
-    background-color: white;
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.aboutind {
+    margin: 50px;
+    background-color: rgb(31, 31, 31);
+    padding: 30px;
+    border-radius: 50px;
+    flex: 30%;
+    min-width: 200px;
+
+}
+
+.aboutsections {
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+    background-color: rgb(220, 220, 220);
+    flex: 20%;
+
+}
+
+
+.aboutmain {
+    padding: 50px;
+    padding-right: 100px;
+}
+
+.aboutpara{
+    background-color: rgb(31, 31, 31);
+    color: rgb(220, 220, 220);
+    
+}
+
+.projects{
+    
 }
 
 .whole{

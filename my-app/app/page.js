@@ -14,22 +14,49 @@ export default function Home() {
       <Navbar />
       <div className={styles.whole}>
 
-        <div className={styles.body1}>
+        <div id = "Start" className={styles.top}>
           <p className = {styles.container}>Hello World! I am Vincent Guarnieri.</p>
           <img src="waving4.png" width="400px" height="400px" style={{"margin-top":"0px"}} />
         </div>
 
-        <div id = "body2" className={styles.body2}>
-          <p>second</p>
+        <div id = "About Me" className={styles.about}>
+
+          <div className={styles.aboutmain}>
+            <p>About Me!</p>
+            <p>Contact:</p>
+            <p>Email: vincentguarnieri1@gmail.com</p>
+            <p>LinkedIn: Click Here!</p>
+          </div>
+
+          <div className={styles.aboutsections}>
+            <div className={styles.aboutind}>          
+              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div className={styles.aboutind}>          
+              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div className={styles.aboutind}>          
+              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>          
+            <div className={styles.aboutind}>          
+              <p className={styles.aboutpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in cLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumulpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+
         </div>
 
-        <div id = "body3" className={styles.body2}>
-          <p>3rf</p>
+        <div id = "Projects" className={styles.projects}>
+          <p >3rf</p>
         </div>
 
-        <div id = "body4" className={styles.body2}>
+        <div id = "Experience" className={styles.experience}>
           <p>4th</p>
         </div>
+
+        <div id = "Education" className={styles.education}>
+          <p>5th</p>
+        </div>
+
 
       </div>
       <Footer />
