@@ -2,10 +2,12 @@ p.container {
     font-size: 40px;
     background-color:  rgb(220, 220, 220);
     color: rgb(80, 80, 80);
-   
+    
 }
 
+
 .top {
+    border-top: 5px;
     background-color:  rgb(220, 220, 220);
     display: flex;
     justify-content: space-evenly;
@@ -14,78 +16,116 @@ p.container {
     padding-right: 10px;
     text-align: center;
     flex-wrap: wrap;
-    padding-bottom: 50px;
-    padding-top: 90px;
+    height: 100vh;
+
 
 }   
 
+
 .about {
-    padding-bottom: 100px;
-    margin-bottom: 0px;
-    background-color: rgb(220, 220, 220);
+    border-top: solid;
+    border-color: black;
+    border-top-width: 1px;
+    padding-bottom: 0px;
+    padding-top: 0px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
+    min-height: 100vh;
 
 }
 
 .aboutind {
-    margin: 30px;
-    background-color: rgb(31, 31, 31);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 50px;
-    flex: 30%;
+    flex: 40%;
     text-align: center;
-    border-style: outset;
-    border-width: 10px;
+    background-color: rgb(241, 255, 228);
+    outline: 1px solid black;
+    min-width: 250px;
+    align-items: center;
 
+}
 
+.aboutimgs{
+    width: 75px;
+    height: 75px;
+    padding-top: 20px;
+    opacity: .65;
+}
+
+.aboutheaders{
+    color: rgb(80, 80, 80);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
 .aboutsections {
     display: flex;
-    margin: 30px;
-    justify-content: space-evenly;
     flex-wrap: wrap;  
-    flex: 10%;
-}
+    flex: 20%;
+    background-color: rgb(255, 225, 228);
+    border: -1px;
+    min-height: 100vh;
+    align-items: stretch;
+
+    }
 
 
 .aboutmain {
-    padding: 30px;
     text-align: center;
-    margin: 30px;
     align-items: center;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(255, 228, 231);
+    padding-left: 30px;
+    padding-right: 30px;
 
+    
 }
 
 .holder {
     font-size: 20px;
-}
+    background-color: rgb(255, 228, 231);
 
-.aboutpara{
-    background-color: rgb(31, 31, 31);
-    color: rgb(235, 235, 235);
-    font-size: 22px;
 
 }
 
 .projects{
-    padding-top: 300px;
+    border-top: solid;
+    border-color: black;
+    border-top-width: 1px;
+    background-color: aquamarine;
+    min-height: 100vh;
+
+}
+
+.projectspara{
+    background-color: aquamarine;
 }
 
 .experience{
-    padding-top: 300px;
+    border-top: solid;
+    border-color: black;
+    border-top-width: 1px;
+    background-color: rgb(255, 127, 127);
+    min-height: 100vh;
+
+}
+
+.experiencepara{
+    background-color: rgb(255, 127, 127);
 }
 
 .education{
-    padding-top: 300px;
+    border-top: solid;
+    border-color: rgb(0, 0, 0);
+    border-top-width: 1px;
+    background-color: beige;
+    min-height: 100vh;
+
+
+}
+
+.educationpara{
+    background-color: beige;
 }
 
 .whole{
