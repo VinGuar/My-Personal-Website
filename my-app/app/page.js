@@ -6,16 +6,36 @@ import Link from 'next/link';
 import Navbar from '../comps/Navbar'
 import Footer from '../comps/Footer'
 
-
 export default function Home() {
 
+  
   return (
     <main>
       <Navbar />
       <div className={styles.whole}>
 
         <section id = "Start" className={styles.top}>
-          <p className = {styles.container}>Hello World! I am Vincent Guarnieri.</p>
+          <div className={styles.container}>
+            <div className = {styles.hello}>
+              <span className={styles.vincent} id="typer"></span>
+              <Typewriter
+              onInit={(typewriter) => {
+              typewriter.typeString('Hello World!')
+              .callFunction(() => {
+              console.log('String typed out!');
+              })
+              .pauseFor(2500)
+              .deleteAll()
+              .callFunction(() => {
+              console.log('All strings were deleted');
+              })
+              .start();
+              }}
+              />
+              <span className={styles.cursor}></span>
+            </div>
+            <p className = {styles.vincent}>I am Vincent Guarnieri.</p>
+          </div>
           <img src="waving4.png" width="400px" height="400px" style={{"margin-top":"0px"}} />
         </section>
 
