@@ -5,6 +5,7 @@ import '../app/globals.css';
 import Link from 'next/link';
 import Navbar from '../comps/Navbar'
 import Footer from '../comps/Footer'
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 
@@ -17,22 +18,17 @@ export default function Home() {
         <section id = "Start" className={styles.top}>
           <div className={styles.container}>
             <div className = {styles.hello}>
-              <span className={styles.vincent} id="typer"></span>
-              <Typewriter
-              onInit={(typewriter) => {
-              typewriter.typeString('Hello World!')
-              .callFunction(() => {
-              console.log('String typed out!');
-              })
-              .pauseFor(2500)
-              .deleteAll()
-              .callFunction(() => {
-              console.log('All strings were deleted');
-              })
-              .start();
-              }}
+              <Typewriter clasName = {styles.hello}
+                  options={{
+                    strings: ['Hello World!', '¡Hola Mundo!', 'नमस्ते दुनिया!', '你好世界!'],
+                    delay: 100,
+                    deleteSpeed: 100,
+                    autoStart: true,
+                    loop: true,
+                    pauseFor: 3000,
+                    cursorClassName: styles.cursor
+                  }}
               />
-              <span className={styles.cursor}></span>
             </div>
             <p className = {styles.vincent}>I am Vincent Guarnieri.</p>
           </div>
