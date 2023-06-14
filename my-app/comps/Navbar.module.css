@@ -10,6 +10,7 @@
    
 }
 
+
 .nav{
     border-radius: 87px;
 }
@@ -28,8 +29,12 @@
     top: 15px;
     border: 3px solid rgb(80, 80, 80);
     border-radius: 27px;
-    opacity: .9;
+    opacity: 1;
+    z-index: 999;
+    
 }
+
+
 
 .left {
     display: flex;

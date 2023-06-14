@@ -54,9 +54,6 @@
 
 
 .about {
-    border-top: solid;
-    border-color: black;
-    border-top-width: 1px;
     padding-bottom: 0px;
     padding-top: 0px;
     display: flex;
@@ -64,42 +61,40 @@
     flex-wrap: wrap;
     align-items: stretch;
     min-height: 100vh;
+    outline: 1px solid;
 
 }
 
 .aboutind {
-    flex: 40%;
+    flex: 30%;
     text-align: center;
-    background-color: rgb(241, 255, 228);
-    outline: 1px solid black;
     min-width: 250px;
+    outline: 1px solid;
     align-items: center;
-
+    box-sizing: border-box;
 }
 
 .aboutimgs{
     width: 75px;
     height: 75px;
-    padding-top: 20px;
+    padding-top: 30px;
     opacity: .65;
     position: relative;
 }
 
-@keyframes spin{
-    0%   {top: 0px; left:0px}
-    25%  {top: 30px;left:30px}
-    50%  {top: 75px;left:75px}
-    75%  {top: 30px;left:30px}
-    100% {top: 0px;left:0px}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.aboutimgs:hover{
-    width: 75px;
-    height: 75px;
-    animation: spin 1s;
-    padding-top: 20px;
-    opacity: .65; 
-}
+
+.aboutimgs:hover {
+    animation: spin 0.5s;
+  }
 
 .aboutheaders{
     color: rgb(80, 80, 80);
@@ -110,28 +105,56 @@
 .aboutsections {
     display: flex;
     flex-wrap: wrap;  
-    flex: 20%;
     background-color: rgb(255, 225, 228);
-    border: -1px;
-    min-height: 100vh;
-    align-items: stretch;
+    min-height: 150vh;
+    flex-direction: column;
+    justify-content: center;
+    flex: 10%;
+
 
     }
 
 
+
 .aboutmain {
-    text-align: center;
-    align-items: center;
-    background-color: rgb(255, 228, 231);
     padding-left: 30px;
     padding-right: 30px;
+    color: rgb(80, 80, 80); 
+    background-color: rgb(255, 225, 228);
 
-    
 }
 
-.holder {
+.stick{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 45px;
+
+}
+
+.aboutmainword{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+
+
+.email {
+    padding: 0px;
     font-size: 20px;
     background-color: rgb(255, 228, 231);
+    padding-bottom: 10px;
 
 
 }

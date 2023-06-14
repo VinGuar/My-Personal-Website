@@ -37,16 +37,51 @@ export default function Home() {
 
         <section id = "About" className={styles.about}>
 
+
+
+          <div className={styles.aboutsections}>
+            <div className={styles.aboutind} style ={{"background-color": "rgb(241, 255, 228)", "margin-right": "1px"}}>          
+              <img src="experience.png" className={styles.aboutimgs} />
+              <h1 className={styles.aboutheaders} >Skills</h1>
+            </div>          
+            <div className={styles.aboutind} style ={{"background-color": "rgb(255, 253, 228)", "margin-right": "1px"}}>          
+              <img src="balance.png" className={styles.aboutimgs} />
+              <h1 className={styles.aboutheaders}>Values</h1>
+            </div>
+            <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)", "margin-right": "1px"}}>    
+              <img src="interest.png" className={styles.aboutimgs} />      
+              <h1 className={styles.aboutheaders}>Professional Interests</h1>
+            </div>
+          </div>
+
           <div className={styles.aboutmain}>
-            <p className={styles.holder}>About Me!</p>
-            <p className={styles.holder}>Email: vincentguarnieri1@gmail.com</p>
-            <p className={styles.holder}>Résumé: make button</p>
-            <p className={styles.holder}>Github: make button</p>
-            <p className={styles.holder}>LinkedIn: make button</p>
+
+            <div className={styles.stick}>
+              <h1 className={styles.aboutmainword}>About Me!</h1>
+              <p className={styles.email}>Email: vincentguarnieri1@gmail.com</p>
+
+              <div className={styles.icons}>
+                <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
+                <button type="button">Résumé </button>
+                </a>                
+                <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
+                  <img style ={{"width": "70px", "opacity":"0.7"}} src="github.png" />
+                </a>
+                <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
+                  <img style ={{"width": "40px", "opacity":"0.7"}} src="linked.png" />
+                </a>
+              </div>
+
+            </div>
 
           </div>
 
+
           <div className={styles.aboutsections}>
+            <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)"}}>    
+              <img src="interest.png" className={styles.aboutimgs} />      
+              <h1 className={styles.aboutheaders}>Professional Interests</h1>
+            </div>
             <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)"}}>    
               <img src="interest.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Professional Interests</h1>
@@ -54,14 +89,6 @@ export default function Home() {
             <div className={styles.aboutind} style ={{"background-color": "rgb(255, 239, 228)"}}>          
               <img src="hobbies.png" className={styles.aboutimgs} />
               <h1 className={styles.aboutheaders}>Hobbies and Passions</h1>
-            </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(241, 255, 228)"}}>          
-              <img src="experience.png" className={styles.aboutimgs} />
-              <h1 className={styles.aboutheaders} >Skills</h1>
-            </div>          
-            <div className={styles.aboutind} style ={{"background-color": "rgb(255, 253, 228)"}}>          
-              <img src="balance.png" className={styles.aboutimgs} />
-              <h1 className={styles.aboutheaders}>Values</h1>
             </div>
           </div>
 

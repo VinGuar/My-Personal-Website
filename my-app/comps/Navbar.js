@@ -24,29 +24,22 @@ const Navbar = () => {
           const offset = section.offsetTop - 300;
           const height = section.offsetHeight;
           const id = section.getAttribute("id");
-          var currid = "Start";
 
 
           if (top >= offset && top < offset + height) {
 
             if (id==="Start"){
               setClicked1(current => false)
-              currid = id;
-
             } else if (id==="About"){
               setClicked2(current => false)
-              currid = id;
-
             } else if (id==="Projects"){
               setClicked3(current => false)
-              currid = id;
             } else if (id==="Experience"){
               setClicked4(current => false)
-              currid = id;
             } else if (id==="Education"){
               setClicked5(current => false)
-              currid = id;
             }
+
           } else {
 
             if (id==="Start"){
@@ -62,6 +55,7 @@ const Navbar = () => {
             }
 
           }
+
         });
       };
   
@@ -95,6 +89,7 @@ const Navbar = () => {
 
       };
 
+     
     return ( 
             <nav>
 
@@ -103,7 +98,7 @@ const Navbar = () => {
 
                       <span className={styles.parenleft}>&#9790;</span>
 
-                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(1)}className = {clicked1 ? styles.display : styles.hide}>Home</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(1)} className = {clicked1 ? styles.display : styles.hide}>Home</div>
                       <div style={{'cursor':'pointer'}} onClick = {() => handleClick(2)} className = {clicked2 ? styles.display : styles.hide}>About!</div>
                       <div style={{'cursor':'pointer'}} onClick = {() => handleClick(3)} className = {clicked3 ? styles.display : styles.hide}>Projects</div>
                       <div style={{'cursor':'pointer'}} onClick = {() => handleClick(4)} className = {clicked4 ? styles.display : styles.hide}>Experience</div>
@@ -112,6 +107,8 @@ const Navbar = () => {
                       <span className={styles.parenright}>&#9789;</span>
 
                   </div>
+
+                  <div className={styles.progress}></div>
               </main>
             </nav>
 
