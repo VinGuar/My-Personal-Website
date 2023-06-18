@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)", "margin-right": "1px"}}>    
               <img src="interest.png" className={styles.aboutimgs} />      
-              <h1 className={styles.aboutheaders}>Professional dfdfdf Interests</h1>
+              <h1 className={styles.aboutheaders}>Professional Interests</h1>
             </div>
           </div>
 
