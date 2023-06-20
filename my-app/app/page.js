@@ -40,17 +40,17 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(241, 255, 228)", "margin-right": "1px"}}>          
+            <div className={styles.aboutind} style ={{"background-color": "rgb(238, 252, 232)", "margin-right": "1px"}}>          
               <img src="experience.png" className={styles.aboutimgs} />
               <h1 className={styles.aboutheaders} >Skills</h1>
             </div>          
-            <div className={styles.aboutind} style ={{"background-color": "rgb(255, 253, 228)", "margin-right": "1px"}}>          
+            <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)", "margin-right": "1px"}}>          
               <img src="balance.png" className={styles.aboutimgs} />
-              <h1 className={styles.aboutheaders}>Values</h1>
+              <h1 className={styles.aboutheaders}>Professional Interests</h1>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)", "margin-right": "1px"}}>    
+            <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)", "margin-right": "1px"}}>    
               <img src="interest.png" className={styles.aboutimgs} />      
-              <h1 className={styles.aboutheaders}>Professional dddInterests</h1>
+              <h1 className={styles.aboutheaders}>Why These Interests?</h1>
             </div>
           </div>
 
@@ -78,17 +78,17 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)"}}>    
+            <div className={styles.aboutind} style ={{"background-color": "rgb(238, 252, 232)"}}>    
               <img src="interest.png" className={styles.aboutimgs} />      
-              <h1 className={styles.aboutheaders}>Professional Interests</h1>
+              <h1 className={styles.aboutheaders}>Values</h1>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(250, 228, 255)"}}>    
+            <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)"}}>    
               <img src="interest.png" className={styles.aboutimgs} />      
-              <h1 className={styles.aboutheaders}>Professional Interests</h1>
-            </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(255, 239, 228)"}}>          
-              <img src="hobbies.png" className={styles.aboutimgs} />
               <h1 className={styles.aboutheaders}>Hobbies and Passions</h1>
+            </div>
+            <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)"}}>          
+              <img src="hobbies.png" className={styles.aboutimgs} />
+              <h1 className={styles.aboutheaders}>Why Me?</h1>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function Home() {
         <section id = "Projects" className={styles.projects}>
           <p className={styles.projectspara}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
           Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.          Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-          Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+          Lorem ipsum is placeholder t  ext commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
           </p>
         </section>
 
