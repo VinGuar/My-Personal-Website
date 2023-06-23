@@ -62,13 +62,13 @@ export default function Home() {
 
               <div className={styles.icons}>
                 <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                <button type="button">Résumé </button>
+                  <button  className={styles.iconind} type="button">Résumé </button>
                 </a>                
                 <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                  <img style ={{"width": "70px", "opacity":"0.7"}} src="github.png" />
+                  <img className={styles.iconind} style ={{"width":"70px","opacity":"0.8"}} src="github.png" />
                 </a>
                 <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                  <img style ={{"width": "40px", "opacity":"0.7"}} src="linked.png" />
+                  <img  className={styles.iconind} style ={{"width": "50px", "opacity":"0.7"}} src="linked.png" />
                 </a>
               </div>
 
