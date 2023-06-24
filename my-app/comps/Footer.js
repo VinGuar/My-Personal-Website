@@ -4,6 +4,7 @@ const Footer = () => {
     return ( 
         <div className={styles.whole}>
             Footer!
+            vincentguarnieri1@gmail.com
         </div>
      );
 }

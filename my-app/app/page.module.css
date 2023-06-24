@@ -98,7 +98,7 @@
 .aboutheaders{
     color: rgb(80, 80, 80);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    
 }
 
 .aboutsections {
@@ -146,7 +146,7 @@
     padding-left: 35px;
     padding-right: 35px;
     border-radius: 30px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 20px;
     color:  rgb(80, 80, 80);
     font-size: 20px;
@@ -160,18 +160,19 @@
 }
 
 .buttonresume:hover{
-    padding: 15px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 30px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    color:  rgb(80, 80, 80);
-    font-size: 20px;
+
     background-position: left bottom;
     
 }
 
+.emailme{
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
 
 .icons{
     display: flex;
@@ -204,6 +205,7 @@
     font-size: 20px;
     padding-bottom: 10px;
 
+
 }
 
 .projects{
@@ -212,8 +214,24 @@
     border-top-width: 1px;
     background-color: aquamarine;
     min-height: 100vh;
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
 }
+
+.projmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.projsec{
+    display: flex;
+}
+
+
 
 .projectspara{
     background-color: aquamarine;

@@ -67,12 +67,16 @@ export default function Home() {
 
             <div className={styles.stick}>
               <h1 className={styles.aboutmainword}>About Me!</h1>
-              <p className={styles.email}>Email: vincentguarnieri1@gmail.com</p>
 
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" style ={{"align-items":"center"}}target="_blank">
                 <button  className={styles.buttonresume}>Résumé</button>
               </a>
-
+              {/*
+              <a style={{"margin-top":"0px"}}href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
+                <img  className={styles.iconind} style ={{"padding-bottom":"0px","width": "47px", "opacity":"0.63"}} src="email.png" />
+              </a>
+              <p className={styles.emailme}>Email Me!</p>
+                */}
             </div>
 
           </div>
@@ -96,10 +100,20 @@ export default function Home() {
         </section>
 
         <section id = "Projects" className={styles.projects}>
-          <p className={styles.projectspara}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-          Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.          Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-          Lorem ipsum is placeholder t  ext commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-          </p>
+
+
+          <div clasName={styles.projmain}>
+            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px"}}>My Projects</h1>
+
+            <div className={styles.projsec}>
+              <div className={styles.projbig}>github click here</div>
+              <p className={styles.projpara}>hello!</p>
+            </div>
+            <div className={styles.projsec}>
+              <div className={styles.projbig}>github click here</div>
+              <p className={styles.projpara}>hello!</p>
+            </div>
+          </div>
         </section>
 
         <section id = "Experience" className={styles.experience}>
