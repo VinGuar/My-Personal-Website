@@ -31,8 +31,17 @@ export default function Home() {
               />
             </div>
             <p className = {styles.vincent}>I am Vincent Guarnieri.</p>
+            <div className={styles.icons}>              
+              <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
+                <img className={styles.iconind} style ={{"width":"65px","opacity":"0.73"}} src="github.png" />
+              </a>
+              <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
+                <img  className={styles.iconind} style ={{"width": "53px", "opacity":"0.63"}} src="linked.png" />
+              </a>
+            </div>
           </div>
           <img src="waving4.png" width="400px" height="400px" style={{"margin-top":"0px"}} />
+        
         </section>
 
         <section id = "About" className={styles.about}>
@@ -60,17 +69,9 @@ export default function Home() {
               <h1 className={styles.aboutmainword}>About Me!</h1>
               <p className={styles.email}>Email: vincentguarnieri1@gmail.com</p>
 
-              <div className={styles.icons}>
-                <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                  <button  className={styles.iconind} type="button">Résumé </button>
-                </a>                
-                <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                  <img className={styles.iconind} style ={{"width":"70px","opacity":"0.8"}} src="github.png" />
-                </a>
-                <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                  <img  className={styles.iconind} style ={{"width": "50px", "opacity":"0.7"}} src="linked.png" />
-                </a>
-              </div>
+              <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" style ={{"align-items":"center"}}target="_blank">
+                <button  className={styles.buttonresume}>Résumé</button>
+              </a>
 
             </div>
 
