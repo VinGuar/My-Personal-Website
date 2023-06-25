@@ -54,11 +54,11 @@ export default function Home() {
               <h1 className={styles.aboutheaders} >Skills</h1>
             </div>          
             <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)", "margin-right": "1px"}}>          
-              <img src="balance.png" className={styles.aboutimgs} />
+              <img src="interest.png" className={styles.aboutimgs} />
               <h1 className={styles.aboutheaders}>Professional Interests</h1>
             </div>
             <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)", "margin-right": "1px"}}>    
-              <img src="interest.png" className={styles.aboutimgs} />      
+              <img src="question.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Why These Interests?</h1>
             </div>
           </div>
@@ -84,15 +84,15 @@ export default function Home() {
 
           <div className={styles.aboutsections}>
             <div className={styles.aboutind} style ={{"background-color": "rgb(238, 252, 232)"}}>    
-              <img src="interest.png" className={styles.aboutimgs} />      
+              <img src="balance.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Values</h1>
             </div>
             <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)"}}>    
-              <img src="interest.png" className={styles.aboutimgs} />      
+              <img src="hobbies.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Hobbies and Passions</h1>
             </div>
             <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)"}}>          
-              <img src="hobbies.png" className={styles.aboutimgs} />
+              <img src="shrug.png" className={styles.aboutimgs} />
               <h1 className={styles.aboutheaders}>Why Me?</h1>
             </div>
           </div>
