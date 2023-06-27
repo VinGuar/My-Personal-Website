@@ -73,7 +73,7 @@ export default function Home() {
               </a>
               {/*
               <a style={{"margin-top":"0px"}}href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                <img  className={styles.iconind} style ={{"padding-bottom":"0px","width": "47px", "opacity":"0.63"}} src="email.png" />
+                <img  className={styles.iconind} style ={{"padding-bottom":"0px","width": "48px", "opacity":"0.63"}} src="email.png" />
               </a>
               <p className={styles.emailme}>Email Me!</p>
                 */}
