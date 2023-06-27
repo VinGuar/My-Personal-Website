@@ -21,11 +21,11 @@ export default function Home() {
               <Typewriter clasName = {styles.hello}
                   options={{
                     strings: ['Hello World!', '¡Hola Mundo!', 'नमस्ते दुनिया!', '你好世界!'],
-                    delay: 100,
-                    deleteSpeed: 100,
+                    delay: 85,
+                    deleteSpeed: 50,
                     autoStart: true,
                     loop: true,
-                    pauseFor: 3000,
+                    pauseFor: 2500,
                     cursorClassName: styles.cursor
                   }}
               />
@@ -103,16 +103,47 @@ export default function Home() {
 
 
           <div clasName={styles.projmain}>
-            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px"}}>My Projects</h1>
+            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center"}}>My Projects</h1>
+              
+            <div className={styles.projallsec}>
 
-            <div className={styles.projsec}>
-              <div className={styles.projbig}>github click here</div>
-              <p className={styles.projpara}>hello!</p>
+              <div className={styles.projsecleft} style={{}}>
+
+                <div>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>Fantasy Football Ranker</p>
+                  <p className={styles.projpara}>Program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
+                </div>  
+                <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
+                  <button className={styles.buttonproj}>Click Me to View!</button>
+                </a>
+
+              </div>
+
+              <div className={styles.projsecright} style={{}}>
+
+                <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
+                  <button className={styles.buttonproj}>Click Me to View!</button>
+                </a>
+                <div>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>NBA Player Grader</p>
+                  <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
+                </div>
+
+              </div>
+
+              <div className={styles.projsecleft} style={{}}>
+
+                <div>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>Fantasy Football Ranker</p>
+                  <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
+                </div>  
+                <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target="_blank">
+                  <button className={styles.buttonproj}>Click Me to View!</button>
+                </a>
+
+              </div>
             </div>
-            <div className={styles.projsec}>
-              <div className={styles.projbig}>github click here</div>
-              <p className={styles.projpara}>hello!</p>
-            </div>
+
           </div>
         </section>
 

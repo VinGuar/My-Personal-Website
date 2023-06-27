@@ -23,7 +23,7 @@ const Navbar = () => {
           const top = window.scrollY;
           const offset = section.offsetTop - 300;
           const height = section.offsetHeight;
-          const id = section.getAttribute("id");
+          const id = section.getAttribute("id");  
 
 
           if (top >= offset && top < offset + height) {
