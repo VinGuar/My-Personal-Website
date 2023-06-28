@@ -1,6 +1,5 @@
 .hello {
     font-size: 40px;
-    background-color:  rgb(220, 220, 220);
     color: rgb(80, 80, 80);
     text-align: center;
     margin-bottom: 0px;
@@ -23,7 +22,6 @@
 
 .vincent {
     font-size: 40px;
-    background-color:  rgb(220, 220, 220);
     color: rgb(80, 80, 80);
     text-align: center;
     margin-bottom: 0px;
@@ -38,7 +36,7 @@
 }
 
 .top {
-    background-color:  rgb(220, 220, 220);
+    background-color: rgb(220, 220, 220);    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -60,25 +58,30 @@
     flex-wrap: wrap;
     align-items: stretch;
     min-height:  100vh;
-    outline: 1px solid;
+    outline: 1px solid rgb(120, 120, 120);
 }
 
 .aboutind {
     flex: 30%;
     text-align: center;
     min-width: 250px;
-    outline: 1px solid;
+    outline: 1px solid rgb(120, 120, 120);
     align-items: center;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .aboutimgs{
-    width: 75px;
-    height: 75px;
-    margin-top: 50px;
-    opacity: .65;
+    width: 100px;
+    height: 100px;
+    opacity: .85;
     position: relative;
     transition: .75s;
+    margin-top: 40px;
+    padding-bottom: 10px;
 }
 
 @keyframes spin {
@@ -97,15 +100,36 @@
   }
 
 .aboutheaders{
-    color: rgb(80, 80, 80);
+    color: rgb(224, 224, 224);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    letter-spacing: 2px;
+}
+
+.aboutline{
+    width: 50px;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: solid;
+    border-color: rgb(224, 224, 224);
+    border-top-width: 2px;
+
+}
+
+.abouttext{
+    color: white;
+    margin-left: 75px;
+    margin-right: 75px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    word-spacing: 2px;
+    padding-bottom: 15px;
 }
 
 .aboutsections {
     display: flex;
     flex-wrap: wrap;  
-    background-color: rgb(255, 225, 228);
+    background-color: rgb(22, 22, 22);
     min-height: 150vh;
     flex-direction: column;
     justify-content: center;
@@ -118,9 +142,9 @@
 .aboutmain {
     padding-left: 30px;
     padding-right: 30px;
-    color: rgb(80, 80, 80); 
-    background-color: rgb(255, 220, 224);
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(85, 85, 85));    
     flex: 1;
+    
 
 }
 
@@ -133,12 +157,14 @@
     text-align: center;
     padding-top: 85px;
     align-items: center;
-    border-bottom: 1px solid;
 }
+
 
 .aboutmainword{
     font-size: 50px;
     margin-bottom: 10px;
+    color: rgb(255, 255, 255); 
+
 }
 
 .buttonresume{
@@ -148,9 +174,11 @@
     border-radius: 30px;
     margin-top: 25px;
     margin-bottom: 35px;
-    color:  rgb(80, 80, 80);
+    color:  rgb(46, 46, 46);
     font-size: 20px;
-    background: linear-gradient(to left, rgb(255, 238, 240) 50%, rgb(255, 182, 182) 50%);
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: linear-gradient(to left, rgb(220, 220, 220) 50%, rgb(150, 150, 150) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 1s ease;
@@ -160,7 +188,7 @@
 }
 
 .buttonresume:hover{
-
+    color: rgb(0, 0, 0);
     background-position: left bottom;
     
 }
@@ -180,7 +208,6 @@
     align-items: center;
     gap: 60px;
     padding-top: 30px;
-    background-color: rgb(220, 220, 220);
     padding: 20px;
     margin-bottom: 10px;
     
@@ -212,7 +239,7 @@
     border-top: solid;
     border-color: black;
     border-top-width: 1px;
-    background-color: rgb(222, 255, 244);
+    background-color: rgb(220, 220, 220);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -225,6 +252,7 @@
     flex-direction: column;
     margin: 1000px;
 }
+
 
 .projallsec {
     margin-top: -45px;
@@ -271,15 +299,13 @@
 }
 
 .buttonproj{
-    background-color: transparent;
-    background: url('/football.png') 1;
     padding: 25px;
     letter-spacing: 2px;
     font-size: 20px;
     padding-left: 75px;
     padding-right: 75px;
     border-radius: 50px;
-    background: linear-gradient(to left, rgb(241, 255, 251) 50%, rgb(150, 255, 220) 50%);
+    background: linear-gradient(to left, rgb(240, 240, 240) 50%, rgb(80, 80, 80) 50%);
     background-size: 200% 100%;
     background-position: right;
     transition: all 1s ease;
@@ -290,6 +316,7 @@
 
 .buttonproj:hover{
     background-position: left;
+    color: rgb(240, 240, 240);
     
 }
 

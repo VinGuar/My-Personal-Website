@@ -49,17 +49,23 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(238, 252, 232)", "margin-right": "1px"}}>          
-              <img src="experience.png" className={styles.aboutimgs} />
+            <div className={styles.aboutind} style ={{"margin-right": "1px"}}>          
+              <img src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
               <h1 className={styles.aboutheaders} >Skills</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>          
-            <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)", "margin-right": "1px"}}>          
-              <img src="interest.png" className={styles.aboutimgs} />
+            <div className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px"}}>          
+              <img src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
               <h1 className={styles.aboutheaders}>Professional Interests</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)", "margin-right": "1px"}}>    
-              <img src="question.png" className={styles.aboutimgs} />      
+            <div className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px"}}>    
+              <img src="hm.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Why These Interests?</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
           </div>
 
@@ -71,29 +77,30 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" style ={{"align-items":"center"}}target="_blank">
                 <button  className={styles.buttonresume}>Résumé</button>
               </a>
-              {/*
-              <a style={{"margin-top":"0px"}}href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                <img  className={styles.iconind} style ={{"padding-bottom":"0px","width": "47px", "opacity":"0.63"}} src="email.png" />
-              </a>
-              <p className={styles.emailme}>Email Me!</p>
-                */}
+
             </div>
 
           </div>
 
 
           <div className={styles.aboutsections}>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(238, 252, 232)"}}>    
-              <img src="balance.png" className={styles.aboutimgs} />      
+            <div className={styles.aboutind} style ={{}}>    
+              <img src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
               <h1 className={styles.aboutheaders}>Values</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(252, 251, 232)"}}>    
-              <img src="hobbies.png" className={styles.aboutimgs} />      
+            <div className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)"}}>    
+              <img src="ball.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Hobbies and Passions</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(248, 240, 249)"}}>          
-              <img src="shrug.png" className={styles.aboutimgs} />
+            <div className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)"}}>          
+              <img src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
               <h1 className={styles.aboutheaders}>Why Me?</h1>
+              <div className={styles.aboutline}></div>
+              <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
           </div>
 
@@ -103,15 +110,15 @@ export default function Home() {
 
 
           <div clasName={styles.projmain}>
-            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center"}}>My Projects</h1>
-              
+            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center", "color":"rgb(80, 80, 80)"}}>My Projects</h1>
+
             <div className={styles.projallsec}>
 
               <div className={styles.projsecleft} style={{}}>
 
                 <div>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>Fantasy Football Ranker</p>
-                  <p className={styles.projpara}>Program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
+                  <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
                 </div>  
                 <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
                   <button className={styles.buttonproj}>Click Me to View!</button>
