@@ -6,10 +6,11 @@ import Link from 'next/link';
 import Navbar from '../comps/Navbar'
 import Footer from '../comps/Footer'
 import Typewriter from 'typewriter-effect';
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
 
-  
+
   return (
     <main>
       <Navbar />
@@ -55,13 +56,13 @@ export default function Home() {
               <div className={styles.aboutline}></div>
               <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>          
-            <div className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px"}}>          
+            <div className={styles.aboutind} id = "2" style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px"}}>          
               <img src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
               <h1 className={styles.aboutheaders}>Professional Interests</h1>
               <div className={styles.aboutline}></div>
               <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
             </div>
-            <div className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px"}}>    
+            <div className={styles.aboutind} id = "3" style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px"}}>    
               <img src="hm.png" className={styles.aboutimgs} />      
               <h1 className={styles.aboutheaders}>Why These Interests?</h1>
               <div className={styles.aboutline}></div>
@@ -117,7 +118,7 @@ export default function Home() {
               <div className={styles.projsecleft} style={{}}>
 
                 <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>Fantasy Football Ranker</p>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
                   <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
                 </div>  
                 <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
@@ -132,7 +133,7 @@ export default function Home() {
                   <button className={styles.buttonproj}>Click Me to View!</button>
                 </a>
                 <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>NBA Player Grader</p>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>NBA Player Grader</p>
                   <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
                 </div>
 
@@ -141,7 +142,7 @@ export default function Home() {
               <div className={styles.projsecleft} style={{}}>
 
                 <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"21px"}}>Fantasy Football Ranker</p>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
                   <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
                 </div>  
                 <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target="_blank">
