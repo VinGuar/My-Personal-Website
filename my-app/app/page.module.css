@@ -318,17 +318,31 @@
 .experience{
     border-top: solid;
     border-color: black;
-    background-color: rgb(220, 220, 220);
-    background-image: linear-gradient(45deg, transparent 20%, rgb(210, 210, 210) 10%, transparent 25%),
-                        linear-gradient(-45deg, transparent 20%, rgb(210, 210, 210) 10%, transparent 25%),
-                        linear-gradient(-45deg, transparent 75%, rgb(210, 210, 210) 80%, transparent 0),
-                        linear-gradient(45deg, transparent 75%, rgb(210, 210, 210) 80%, transparent 0);
+    background-color: rgb(48, 48, 48);
+    background-image: linear-gradient(45deg, transparent 20%, rgb(35, 35, 35) 10%, transparent 25%),
+                        linear-gradient(-45deg, transparent 20%, rgb(35, 35, 35) 10%, transparent 25%),
+                        linear-gradient(-45deg, transparent 75%, rgb(35, 35, 35) 80%, transparent 0),
+                        linear-gradient(45deg, transparent 75%, rgb(35, 35,35) 80%, transparent 0);
     background-attachment: fixed;
     border-top-width: 1px;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 75px;
+    padding-right: 75px;
+    
+
+}
+
+.experiencemain{
+    display: flex;
+    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
 
 }
 
@@ -338,21 +352,126 @@
     justify-content: center;
 }
 
-.leftarrow, .rightarrow{
-    margin: 50px;
-    font-size: 75px;
-    padding-right: 15px;
-    padding-left: 15px;
-    transition: .3s;
-    font-weight: bold;
+.leftarrow{
+	width: 30px;
+	height: 30px;
+	transform: rotate(-45deg);
 
 }
 
-.leftarrow:hover, .rightarrow:hover{
-    transform: scale(1.5);
+.leftarrow::before{
+	content: '';
+    width: 100%;
+	height: 100%;
+	border-width: 10px 0 0 10px;
+	border-style: solid;
+	border-color: rgb(151, 151, 151);
+	transition: .2s ease;
+	display: block;
+	transform-origin: 0% 0%;
+	
+}
+
+.leftarrow::after{
+    content: '';
+    float: left;
+    position: relative;
+    top: -111%;
+    width: 100%;
+    height: 0%;
+    border-width: 0 0 0 10px;
+    border-style: solid;
+    transform-origin: 0% 0%;
+    transition:.2s ease;
+}
+
+.leftarrow:hover::after{
+    transform: rotate(-45deg);
+    border-color: rgb(255, 255, 255);
+    border-width: 0 0 0 8px;
+    height: 170%;
+    width: 100%;
     cursor: pointer;
-    padding: 15px;
-    
+
+}
+
+.leftarrow:hover::before{
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transform: scale(.8);
+}
+
+.rightarrow{
+	width: 30px;
+	height: 30px;
+	transform: rotate(-225deg);
+}
+
+.rightarrow::before{
+	content: '';
+    width: 100%;
+	height: 100%;
+	border-width: 10px 0 0 10px;
+	border-style: solid;
+	border-color: rgb(151, 151, 151);
+	transition: .2s ease;
+	display: block;
+	transform-origin: 0% 0%;
+	
+}
+
+.rightarrow::after{
+    content: '';
+    float: left;
+    position: relative;
+    top: -111%;
+    width: 100%;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    transform-origin: 0% 0%;
+    transition: .2s ease;
+}
+
+.rightarrow:hover::after{
+    transform: rotate(-45deg);
+    border-color: rgb(255, 255, 255);
+    border-width: 0 0 0 8px;
+    height: 170%;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+.rightarrow:hover::before{
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transform: scale(.8);
+    color: aliceblue;
+}
+
+
+.arrowsdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oldnew{
+    padding-top: 10px;
+    font-size: 17px;
+    color: rgb(190, 190, 190);
+    font-weight: bold;
+}
+
+.oldnew:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .2s ease;
+    color: white;
 }
 
 .indexpsec{
@@ -368,18 +487,79 @@
     color: white;
     background-color: black;
     border-radius: 25px;
-    margin-top: 50px;
-
+    display: flex;
+    flex-direction: column;
+    animation: inout .6s ease-in-out;
 }
 
+.sechide{
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    left: -10px;
+    
+}
+
+@keyframes inout {
+    0% {opacity: 0.3;}
+    100% {opacity: 1;}
+  }
+
+
 .expheader{
-    color: white;
+    color: rgb(220, 220, 220);
+    text-align: center;
 }
 
 .exppara{
     padding-top: 25px;
-    color: white;
+    color: rgb(220, 220, 220);
+    padding-top: 0px;
+    padding-left: 20px;
 
+
+}
+
+.date{
+    color: rgb(220, 220, 220);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 20px;
+
+}
+
+.expminiheaders{
+    color: rgb(220, 0, 0);
+    padding-top: 30px;
+    position: relative;
+
+}
+
+.expminiheaders::before{
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: radial-gradient(rgb(255, 0, 0), rgb(0, 0, 0));
+    border-radius: 50px;
+    position: absolute;
+    left: -44px;
+    top: 32px;   
+}
+
+
+
+.timeline{
+    display: flex;
+    gap: 30px;
+
+}
+
+.line{
+    padding: 3px;
+    background-image: radial-gradient(rgb(255, 0, 0), rgb(75, 0, 0));
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .dot{
@@ -387,26 +567,94 @@
     height: 15px;
     width: 15px;
     margin: 0 8px;
-    background-color: #bbb;
+    background-color: rgb(70, 70, 70);
     border-radius: 50%;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: inline-block;
     transition: background-color 0.6s ease;
+}
+
+.dot:hover{
+    background-color: rgb(120, 120, 120);
+}
+
+.activeBt{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 8px;
+    border-radius: 50%;
+    margin-top: 40px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
 }
 
 .education{
     border-top: solid;
     border-color: rgb(0, 0, 0);
     border-top-width: 1px;
-    background-color: beige;
+    background-color: rgb(220, 220, 220);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
+.educbox{
+    display: flex;
+    gap: 0px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    align-items: center;
 
 }
+
 
 .educationpara{
-    background-color: beige;
+    position: relative;
+    
 }
+
+.lineeducation{
+    padding: 1.45px;
+    background-image: radial-gradient(rgb(255, 94, 0), rgb(255, 123, 0));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+
+}
+
+.educminiheaders::before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid;
+    border-width: 3.2px;
+    border-radius: 50px;
+    position: absolute;
+    left: -41.7px;
+    top: 23.5px;   
+    background-color: rgb(220, 220, 220);
+
+}
+
+
+.paraboxtime{
+    display: flex;
+    max-width: 900px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.schoolpics{
+    width: 100px;
+    margin-right: 0px;
+    
+}
+
 
 .whole{
     display: flex;
@@ -441,4 +689,8 @@
     .projpara{
         max-width: 250px;
     }
+}
+
+@media screen and (max-width:500px) {
+
 }

@@ -9,6 +9,7 @@ import Footer from '../comps/Footer'
 import Typewriter from 'typewriter-effect';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
 
@@ -53,6 +54,67 @@ export default function Home() {
   const { ref: ref3, inView: inView3 } = useInView({
     threshold: .3
   });
+
+
+  {/*js for slideshow*/}
+  const [isOn1, setShow1] = useState(false);
+  const [isOn2, setShow2] = useState(true);
+
+  const [isOnbt1, setShowbt1] = useState(true);
+  const [isOnbt2, setShowbt2] = useState(true);
+
+  const slidesRef = useRef([]);
+  const dotsRef = useRef([]);
+  const [slideIndex, setSlideIndex] = useState(2);
+
+
+  useEffect(() => {
+    showSlides(slideIndex);
+  }, [slideIndex]);
+
+  const plusSlides = (n) => {
+    setSlideIndex(slideIndex + n);
+  };
+
+  const currentSlide = (n) => {
+    setSlideIndex(n);
+  };
+
+  const showSlides = (n) => {
+    let i;
+    const slides = slidesRef.current;
+    const dots = dotsRef.current;
+
+    if (n > slides.length) {
+      setSlideIndex(slides.length);
+      return;
+    }
+
+    if (n < 1) {
+      setSlideIndex(1);
+      return;
+    }
+    console.log(slideIndex)
+      
+    setShow1(current => false);
+    setShow2(current => false);
+
+    setShowbt2(current => true);
+    setShowbt1(current => true);
+    
+
+    if (slideIndex==1){
+      setShow1(current => true);
+      setShowbt1(current => false);
+    } else if (slideIndex==2){
+      setShow2(current => true);
+      setShowbt2(current => false);
+
+    }
+
+  };
+
+  
 
 
   return (
@@ -171,7 +233,7 @@ export default function Home() {
 
             <div className={styles.projallsec}>
 
-              <motion.div ref={ref1} initial={{opacity:0}} hidden={{rotate: 0}} animate={{ rotate: inView1 ? 0 : 180, opacity: inView1 ? 1 : 1}} transition={{type:"spring", duration: inView1 ? .8 : 0}} className={styles.projsecleft} style={{}} >
+              <motion.div ref={ref1} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView1 ? 0 : 180, opacity: inView1 ? 1 : 0}} transition={{type:"spring", duration: inView1 ? .8 : 0}} className={styles.projsecleft} style={{}} >
 
                 <div>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
@@ -183,7 +245,7 @@ export default function Home() {
 
               </motion.div>
 
-              <motion.div ref={ref2} initial={{opacity:0}} hidden={{rotate: 0}} animate={{ rotate: inView2 ? 0 : 180, opacity: inView2 ? 1 : 0}} transition={{type:"spring", duration: inView2 ? 0.8 : 0}} className={styles.projsecright} style={{}}>
+              <motion.div ref={ref2} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView2 ? 0 : 180, opacity: inView2 ? 1 : 0}} transition={{type:"spring", duration: inView2 ? 0.8 : 0}} className={styles.projsecright} style={{}}>
 
                 <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
                   <button className={styles.buttonproj}>Click Me to View!</button>
@@ -195,7 +257,7 @@ export default function Home() {
 
               </motion.div>
 
-              <motion.div ref={ref3} initial={{opacity:0}} hidden={{rotate: 0}} animate={{ rotate: inView3 ? 0 : 180, opacity: inView3 ? 1 : 0}} transition={{type:"spring", duration: inView3 ? 0.8 : 0}} className={styles.projsecleft} style={{}}>
+              <motion.div ref={ref3} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView3 ? 0 : 180, opacity: inView3 ? 1 : 0}} transition={{type:"spring", duration: inView3 ? 0.8 : 0}} className={styles.projsecleft} style={{}}>
 
                 <div>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
@@ -212,30 +274,99 @@ export default function Home() {
         </section>
 
         <section id = "Experience" className={styles.experience}>
-          
-          <a className={styles.leftarrow}>❮</a>
 
-          <div className={styles.expsections}>
-            <div className={styles.indexpsec}>
-              <div>
-                <h1 className={styles.expheader}>James River Equipment</h1>
-                <p className={styles.exppara}>Elit deserunt sint tempor est qui non mollit qui. Esse commodo quis nisi eiusmod dolore fugiat dolor. Nisi anim nostrud Lorem do esse culpa enim ea. Esse eu veniam adipisicing excepteur velit. Eiusmod fugiat fugiat duis sit non Lorem dolore. Commodo eu ut sunt adipisicing.</p>
-              </div>
-            </div>
-            <div style={{"display":"flex", "justify-content":"center"}}>
-              <span className={styles.dot}></span> 
-              <span className={styles.dot}></span> 
-              <span className={styles.dot}></span> 
-            </div>
+          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(220,220,220)", "padding-bottom":"25px", "text-align":"center"}}>Experience</h1>
+
+          <div style={{"display":"flex", "justify-content":"center", "padding-top":"0px"}}>
+                <span onClick={() => currentSlide(1)} className={isOnbt1 ? styles.dot : styles.activeBt}></span> 
+                <span onClick={() => currentSlide(2)} className={isOnbt2 ? styles.dot : styles.activeBt}></span> 
           </div>
+          <div className={styles.experiencemain}>
+            <div className={styles.arrowsdiv} style={{"margin-right":"70px"}} onClick={() => plusSlides(-1)}>
+              <div className={styles.leftarrow}></div>
+              <p className={styles.oldnew}>Older</p>
+            </div>
 
-          <a className={styles.rightarrow}>❯</a>
+            <div className={styles.expsections}>
+
+              
+
+              <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
+                <h1 className={styles.expheader}>James River Equipment</h1>
+                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
+                <div className={styles.timeline}>
+                  <div className={styles.line}>
+                  </div>
+                  <div style={{"display":"flex", "flex-direction":"column"}}>
+                    <div>
+                      <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
+                      <h5 className={styles.date}>05/22 - 08/22</h5>
+                      <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees' software and hardware problems.</p>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+              
+              <div ref={(el) => (slidesRef.current[1] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
+                <h1 className={styles.expheader}>Scribe On Demand</h1>
+                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(newest)</h3>
+                <div className={styles.timeline}>
+                  <div className={styles.line}></div>
+                  <div style={{"display":"flex", "flex-direction":"column"}}>
+                    <div>
+                      <h3 className={styles.expminiheaders}>Web Developer and Digital Marketer</h3>
+                      <h5 className={styles.date}>06/21 - Present</h5>
+                      <p className={styles.exppara}>Fully built/developed and designed their website. Helped both Scribe and their clientele with digital marketing and SEO.</p>
+                    </div>
+                    <div>
+                      <h3 className={styles.expminiheaders}>Intern </h3>
+                      <h5 className={styles.date}>06/20 - 06/21</h5>
+                      <p className={styles.exppara}>Interned with various things like website design, SEO, and digital marketing.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div className={styles.arrowsdiv} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
+              <div className={styles.rightarrow}></div>
+              <p className={styles.oldnew}>Newer</p>
+            </div>
+          </div>  
 
 
         </section>
 
         <section id = "Education" className={styles.education}>
-          <p className={styles.educationpara}>5th</p>
+          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(40,40,40)", "padding-bottom":"25px", "text-align":"center"}}>Education</h1>
+          <div className={styles.timeline}>
+            <div className={styles.lineeducation}>
+            </div>
+            <div className={styles.paraboxtime}>
+              <div className={styles.educbox}>
+                <div className={styles.educationpara}>
+                      <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
+                      <p className={styles.projpara} style={{"color":"rgb(190, 90, 0)", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
+                      <p className={styles.projpara} style={{"color":"rgb(190, 90, 0)", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px"}}> Pursuing a bachelor's in Computer Science and a minor in Data Science.</p>
+                </div>
+                <div>
+                    <img src="uva.png" className={styles.schoolpics}></img>
+                </div>
+              </div>
+
+              <div className={styles.educbox}>
+                <div className={styles.educationpara}>
+                      <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>Deep Run High School</h1>
+                      <h2 style={{"color":"rgb(5, 0, 130)", "font-size":"19px", "padding-left": "20px"}}>Center for Information Technology</h2>
+                      <p className={styles.projpara} style={{"color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492</p>
+                </div>
+                <div>
+                    <img src="uva.png" className={styles.schoolpics}></img>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
 
