@@ -1,6 +1,46 @@
 .whole {
     background-color: rgb(36,36,36);
-    padding: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 150px;
 
+}
 
+.emailpart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.footerpara{
+    color: rgb(220, 220, 220);
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+.footerline{
+    width: 30px;
+    border-bottom: 1px solid;
+    border-color: rgb(220,220,220);
+}
+
+.iconfooter{
+    color: white;
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+
+}
+
+.iconfootersecs{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.iconfooter:hover, .footerpara:hover{
+    transition: .3s ease-in-out;
+    transform: scale(1.2);
 }

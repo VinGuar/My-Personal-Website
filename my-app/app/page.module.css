@@ -9,9 +9,17 @@
 .cursor {
     height: 19px;
     font-size: 50px;
-    animation: blink .4s linear infinite alternate;
+    -webkit-animation: blink .4s linear infinite alternate;
+            animation: blink .4s linear infinite alternate;
 
 }
+
+@-webkit-keyframes blink {
+    0% {opacity: 1;}
+    49% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 
 @keyframes blink {
     0% {opacity: 1;}
@@ -57,8 +65,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: stretch;
-    min-height:  100vh;
+    min-height:  150vh;
     outline: 1px solid rgb(120, 120, 120);
+
 }
 
 .aboutind {
@@ -66,11 +75,11 @@
     text-align: center;
     min-width: 250px;
     align-items: center;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    justify-content: flex-start;
+    flex: 1;
+    min-height: 500px;
 }
 
 .aboutimgs{
@@ -81,6 +90,16 @@
     transition: .75s;
     margin-top: 40px;
     padding-bottom: 10px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    rotate: 0 1 1 0deg;
+}
+  100% {
+    rotate: 1 1 1 360deg;
+
+}
 }
 
 @keyframes spin {
@@ -117,22 +136,22 @@
 
 .abouttext{
     color: white;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
     letter-spacing: 2px;
     line-height: 25px;
     word-spacing: 2px;
     padding-bottom: 30px;
+    
 }
 
 .aboutsections {
     display: flex;
     flex-wrap: wrap;  
     background-color: rgb(22, 22, 22);
-    flex-direction: column;
     justify-content: center;
     flex: 10%;
-
+    align-self: stretch;
 }
 
 
@@ -147,6 +166,7 @@
 }
 
 .stick{
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
@@ -204,7 +224,8 @@
 }
 
 .iconind{
-	filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+	-webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+	        filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -343,6 +364,7 @@
     align-items: center;
     margin-bottom: 150px;
     flex-wrap: wrap;
+    position: -webkit-sticky;
     position: sticky;
 
 }
@@ -490,7 +512,8 @@
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    animation: inout .6s ease-in-out;
+    -webkit-animation: inout .6s ease-in-out;
+            animation: inout .6s ease-in-out;
 }
 
 .sechide{
@@ -500,6 +523,11 @@
     left: -10px;
     
 }
+
+@-webkit-keyframes inout {
+    0% {opacity: 0.3;}
+    100% {opacity: 1;}
+  }
 
 @keyframes inout {
     0% {opacity: 0.3;}
@@ -553,6 +581,7 @@
 .timeline{
     display: flex;
     gap: 30px;
+    position: -webkit-sticky;
     position: sticky;
 }
 

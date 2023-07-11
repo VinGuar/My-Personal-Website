@@ -161,15 +161,15 @@ export default function Home() {
                 <img src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
                 <h1 className={styles.aboutheaders} >Skills</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web design/development, SEO, JavaScript, and a range of other technologies.</p>
               </motion.div>  
             </div>  
             <div style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(120, 120, 120)"}}>      
               <motion.div ref={refsec2} animate={{opacity: inViewsec2 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "2" >          
                 <img src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
                 <h1 className={styles.aboutheaders}>Professional Interests</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <div className={styles.aboutline}></div> 
+                <p className={styles.abouttext}>My primary passions lie in programming, developing, machine learning, AI, full-stack development, collaborative teamwork, and all things computer-related.</p>
               </motion.div>
             </div>
             <div style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(120, 120, 120)"}}>
@@ -177,7 +177,7 @@ export default function Home() {
                 <img src="hm.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Why These Interests?</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <p className={styles.abouttext}>I enjoy the above interests as they encompass three of my favorite things: creating, innovating, and problem-solving.</p>
               </motion.div>
             </div>
           </div>
@@ -202,15 +202,15 @@ export default function Home() {
                 <img src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
                 <h1 className={styles.aboutheaders}>Values</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <p className={styles.abouttext}>I strive to live by four core values: treating others with kindness, practicing honesty, working as hard as I can, and finding joy in everything I do.</p>
               </motion.div>
             </div>
             <div style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(120, 120, 120)"}}>      
               <motion.div ref={refsec5} animate={{opacity: inViewsec5 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)"}}>    
                 <img src="ball.png" className={styles.aboutimgs} />      
-                <h1 className={styles.aboutheaders}>Hobbies and Passions</h1>
+                <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature's beauty, and cherishing time with friends and family.</p>
               </motion.div>
             </div>
             <div style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(120, 120, 120)"}}>
@@ -218,7 +218,7 @@ export default function Home() {
                 <img src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
                 <h1 className={styles.aboutheaders}>Why Me?</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Adipisicing elit irure elit consequat velit sint enim anim consectetur in amet sint. Cillum dolore magna cupidatat adipisicing.    </p>
+                <p className={styles.abouttext}>I am dedicated, hard-working, and will never shy away from a challenge. Also, I always constantly seek to learn and adapt to the ever-evolving times.</p>
               </motion.div>
             </div>
           </div>
@@ -256,7 +256,8 @@ export default function Home() {
                 </div>
 
               </motion.div>
-
+              
+              {/*
               <motion.div ref={ref3} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView3 ? 0 : 180, opacity: inView3 ? 1 : 0}} transition={{type:"spring", duration: inView3 ? 0.8 : 0}} className={styles.projsecleft} style={{}}>
 
                 <div>
@@ -268,6 +269,7 @@ export default function Home() {
                 </a>
 
               </motion.div>
+                */}
             </div>
 
           </div>
