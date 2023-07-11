@@ -339,30 +339,34 @@ export default function Home() {
         </section>
 
         <section id = "Education" className={styles.education}>
-          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(40,40,40)", "padding-bottom":"25px", "text-align":"center"}}>Education</h1>
-          <div className={styles.timeline}>
+          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(40,40,40)", "padding-bottom":"80px", "text-align":"center"}}>Education</h1>
+          <div className={styles.timeline} style={{"padding-bottom":"75px"}}>
             <div className={styles.lineeducation}>
             </div>
-            <div className={styles.paraboxtime}>
+            <div className={styles.paraboxtime} style={{"padding-right":"0px"}}>
               <div className={styles.educbox}>
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
-                      <p className={styles.projpara} style={{"color":"rgb(190, 90, 0)", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
-                      <p className={styles.projpara} style={{"color":"rgb(190, 90, 0)", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px"}}> Pursuing a bachelor's in Computer Science and a minor in Data Science.</p>
+                      <p className={styles.projpara} style={{"color":"rgb(210, 110, 0)", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
+                      <p className={styles.projpara} style={{"color":"rgb(210, 110, 0)", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor's degree in Computer Science and a minor in Data Science.</p>
                 </div>
                 <div>
+                <a href="https://www.virginia.edu/" target="_blank">
                     <img src="uva.png" className={styles.schoolpics}></img>
+                </a>               
                 </div>
               </div>
 
               <div className={styles.educbox}>
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>Deep Run High School</h1>
-                      <h2 style={{"color":"rgb(5, 0, 130)", "font-size":"19px", "padding-left": "20px"}}>Center for Information Technology</h2>
-                      <p className={styles.projpara} style={{"color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492</p>
+                      <h2 style={{"color":"rgb(40, 40, 40)", "font-size":"19px", "font-weight":"bold", "padding-left": "20px"}}>Center for Information Technology</h2>
+                      <p className={styles.projpara} style={{"color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-right":"50px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492 in my class.</p>
                 </div>
                 <div>
-                    <img src="uva.png" className={styles.schoolpics}></img>
+                <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank">
+                    <img src="dr.png" className={styles.schoolpics}></img>
+                </a>
                 </div>
               </div>
             </div>
