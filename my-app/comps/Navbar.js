@@ -72,22 +72,39 @@ const Navbar = () => {
         console.log('Clicked!');
           if (num === 1){
             document.getElementById('Start').scrollIntoView({ behavior: 'smooth'});
+            setNav(current => true)
+
           } else if (num === 2){
             document.getElementById('About').scrollIntoView({ behavior: 'smooth'});
+            setNav(current => true)
+
 
           }else if (num === 3){
             document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' });
+            setNav(current => true)
+
 
           }else if (num === 4){
             document.getElementById('Experience').scrollIntoView({ behavior: 'smooth' });
+            setNav(current => true)
+
 
           }else if (num === 5){
             document.getElementById('Education').scrollIntoView({ behavior: 'smooth' });
+            setNav(current => true)
+
         }
 
         
 
       };
+
+    const [navClick, setNav] = useState(true);
+
+    
+    const navBarClick = () => {
+      setNav(current => !navClick)
+    }
 
      
     return ( 
@@ -108,8 +125,24 @@ const Navbar = () => {
 
                   </div>
 
-                  <div className={styles.progress}></div>
               </main>
+
+              <div style={{'cursor':'pointer'}} className={navClick ? styles.mobilemenu : styles.navopen}>
+                    <div className={navClick ? styles.bars : styles.barsopen} onClick={() => navBarClick()} >
+                      <div className={navClick ? styles.bar1 : styles.bar1open}></div>
+                      <div className={navClick ? styles.bar2 : styles.bar2open}></div>
+                      <div className={navClick ? styles.bar3 : styles.bar3open}></div>
+                    </div>
+                    <div className={navClick ? styles.hider : styles.secs}>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(1)} className = {clicked1 ? styles.menusmallhead : styles.menusmallheadhide}>Home</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(2)} className = {clicked2 ? styles.menusmallhead : styles.menusmallheadhide}>About!</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(3)} className = {clicked3 ? styles.menusmallhead : styles.menusmallheadhide}>Projects</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(4)} className = {clicked4 ? styles.menusmallhead : styles.menusmallheadhide}>Experience</div>
+                      <div style={{'cursor':'pointer'}} onClick = {() => handleClick(5)} className = {clicked5 ? styles.menusmallhead : styles.menusmallheadhide}>Education</div>
+
+                    </div>
+              </div>
+
             </nav>
 
      );

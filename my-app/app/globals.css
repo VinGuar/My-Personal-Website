@@ -5,15 +5,24 @@ p {
 
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(80,80,80);
     letter-spacing: 1px;
     scroll-behavior: smooth;
+    max-width: 100vw;
+
+
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+
+
  }
+
+
 
 .navbar {
 

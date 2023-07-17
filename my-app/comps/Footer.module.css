@@ -13,12 +13,14 @@
     flex-direction: column;
     justify-content: flex-end;
     color: white;
+    
 }
 
 .footerpara{
     color: rgb(220, 220, 220);
     margin-bottom: 0px;
     font-size: 18px;
+    text-decoration: dotted;
 }
 
 .footerline{
@@ -43,4 +45,19 @@
 .iconfooter:hover, .footerpara:hover{
     transition: .3s ease-in-out;
     transform: scale(1.2);
+}
+
+
+@media screen and (max-width:755px) {
+    .whole{
+        flex-direction: column;
+        align-items: center;
+        gap: 75px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .footerpara{
+        font-size: 15px;
+    }
 }

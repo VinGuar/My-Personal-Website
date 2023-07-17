@@ -44,15 +44,15 @@ export default function Home() {
 
   {/* refs and inview for project seciton*/}
   const { ref: ref1, inView: inView1 } = useInView({
-    threshold: .3
+    threshold: .1
   });
   
   const { ref: ref2, inView: inView2 } = useInView({
-    threshold: .3
+    threshold: .1
   });
 
   const { ref: ref3, inView: inView3 } = useInView({
-    threshold: .3
+    threshold: .1
   });
 
 
@@ -118,12 +118,14 @@ export default function Home() {
 
 
   return (
-    <main>
+    <main className={styles.everything}>
       <Navbar />
       <div className={styles.whole}>
 
         <section id = "Start" className={styles.top}>
+
           <div className={styles.container}>
+            
             <div className = {styles.hello}>
             <Typewriter clasName = {styles.hello}
                   options={{
@@ -137,44 +139,48 @@ export default function Home() {
                   }}
               />  
             </div>
-            <p className = {styles.vincent}>I am Vincent Guarnieri.</p>
+            <div style={{"display":"flex", "flex-wrap":"wrap", "justify-content":"center", "align-items":"center", "text-align":"center"}}>
+              <p className = {styles.iam}>I am</p>
+              <p className = {styles.vincent}> Vincent Guarnieri.</p>
+            </div>
             <div className={styles.icons}>              
               <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                <img className={styles.iconind} style ={{"width":"65px","opacity":"0.73"}} src="github.png" />
+                <img alt="github icon" className={styles.iconind} style ={{"width":"65px","opacity":"0.93"}} src="github.png" />
               </a>
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                <img  className={styles.iconind} style ={{"width": "53px", "opacity":"0.63"}} src="linked.png" />
+                <img alt="linkedin icon" className={styles.iconind} style ={{"width": "53px", "opacity":"0.83"}} src="linked.png" />
               </a>
             </div>
           </div>
-          <img src="waving4.png" width="400px" height="400px" style={{"margin-top":"0px"}} />
-        
+          <img alt="vincent surfing on keyboard" className={styles.imgtest} src="keyfly.png" style={{"margin-top":"0px"}} />
+
         </section>
+
 
         <section id = "About" className={styles.about}>
 
 
 
           <div className={styles.aboutsections}>
-            <div style ={{"margin-right": "1px", "outline": "1px solid rgb(120, 120, 120)"}}>
+            <div style ={{"margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>
               <motion.div ref={refsec1} animate={{opacity: inViewsec1 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>          
-                <img src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
+                <img alt="vincent as detective skills" src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
                 <h1 className={styles.aboutheaders} >Skills</h1>
                 <div className={styles.aboutline}></div>
                 <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web design/development, SEO, JavaScript, and a range of other technologies.</p>
               </motion.div>  
             </div>  
-            <div style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(120, 120, 120)"}}>      
+            <div style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
               <motion.div ref={refsec2} animate={{opacity: inViewsec2 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "2" >          
-                <img src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
+                <img alt="vincent presenting in meeting" src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
                 <h1 className={styles.aboutheaders}>Professional Interests</h1>
                 <div className={styles.aboutline}></div> 
                 <p className={styles.abouttext}>My primary passions lie in programming, developing, machine learning, AI, full-stack development, collaborative teamwork, and all things computer-related.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(120, 120, 120)"}}>
+            <div style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255"}}>
               <motion.div ref={refsec3} animate={{opacity: inViewsec3 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "3">    
-                <img src="hm.png" className={styles.aboutimgs} />      
+                <img alt="vincent being curious" src="hm.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Why These Interests?</h1>
                 <div className={styles.aboutline}></div>
                 <p className={styles.abouttext}>I enjoy the above interests as they encompass three of my favorite things: creating, innovating, and problem-solving.</p>
@@ -185,7 +191,7 @@ export default function Home() {
           <div className={styles.aboutmain}>
 
             <div className={styles.stick}>
-              <h1 className={styles.aboutmainword}>About Me!</h1>
+              <h1 className={styles.aboutmainword} style={{"color":"rgb(150, 195, 255)"}}>About Me!</h1>
 
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" style ={{"align-items":"center"}}target="_blank">
                 <button  className={styles.buttonresume}>Résumé</button>
@@ -197,25 +203,25 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div style ={{"outline": "1px solid rgb(120, 120, 120)"}}>      
+            <div style ={{"outline": "1px solid rgb(181, 213, 255)"}}>      
               <motion.div ref={refsec4} animate={{opacity: inViewsec4 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>    
-                <img src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
+                <img alt="vincent with halo on" src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
                 <h1 className={styles.aboutheaders}>Values</h1>
                 <div className={styles.aboutline}></div>
                 <p className={styles.abouttext}>I strive to live by four core values: treating others with kindness, practicing honesty, working as hard as I can, and finding joy in everything I do.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(120, 120, 120)"}}>      
+            <div style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(150, 195, 255)"}}>      
               <motion.div ref={refsec5} animate={{opacity: inViewsec5 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)"}}>    
-                <img src="ball.png" className={styles.aboutimgs} />      
+                <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
                 <div className={styles.aboutline}></div>
                 <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature's beauty, and cherishing time with friends and family.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(120, 120, 120)"}}>
+            <div style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
               <motion.div ref={refsec6} animate={{opacity: inViewsec6 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)"}}>          
-                <img src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
+                <img alt="puppy eyes dog and vincent" src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
                 <h1 className={styles.aboutheaders}>Why Me?</h1>
                 <div className={styles.aboutline}></div>
                 <p className={styles.abouttext}>I am dedicated, hard-working, and will never shy away from a challenge. Also, I always constantly seek to learn and adapt to the ever-evolving times.</p>
@@ -229,29 +235,30 @@ export default function Home() {
 
 
           <div className={styles.projmain}>
-            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center", "color":"rgb(80, 80, 80)"}}>My Projects</h1>
+            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center", "color":"rgb(43, 45, 66)"}}>My Projects</h1>
 
             <div className={styles.projallsec}>
 
               <motion.div ref={ref1} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView1 ? 0 : 180, opacity: inView1 ? 1 : 0}} transition={{type:"spring", duration: inView1 ? .8 : 0}} className={styles.projsecleft} style={{}} >
 
-                <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
+                <div className={styles.projorder1}>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Fantasy Football Ranker</p>
                   <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
                 </div>  
-                <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
+                <a className={styles.projorder2} href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
                   <button className={styles.buttonproj}>Click Me to View!</button>
                 </a>
 
               </motion.div>
 
+
               <motion.div ref={ref2} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView2 ? 0 : 180, opacity: inView2 ? 1 : 0}} transition={{type:"spring", duration: inView2 ? 0.8 : 0}} className={styles.projsecright} style={{}}>
 
-                <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
+                <a className={styles.projorder2} href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
                   <button className={styles.buttonproj}>Click Me to View!</button>
                 </a>
-                <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>NBA Player Grader</p>
+                <div className={styles.projorder1}>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>NBA Player Grader</p>
                   <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
                 </div>
 
@@ -279,14 +286,21 @@ export default function Home() {
 
           <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(220,220,220)", "padding-bottom":"25px", "text-align":"center"}}>Experience</h1>
 
-          <div style={{"display":"flex", "justify-content":"center", "padding-top":"0px"}}>
-                <span onClick={() => currentSlide(1)} className={isOnbt1 ? styles.dot : styles.activeBt}></span> 
-                <span onClick={() => currentSlide(2)} className={isOnbt2 ? styles.dot : styles.activeBt}></span> 
+          <div className={styles.dotsmobile} style={{"display":"flex", "justify-content":"center", "padding-top":"0px"}}>
+              <span onClick={() => currentSlide(1)} className={isOnbt1 ? styles.dot : styles.activeBt}></span> 
+              <span onClick={() => currentSlide(2)} className={isOnbt2 ? styles.dot : styles.activeBt}></span> 
           </div>
           <div className={styles.experiencemain}>
-            <div className={styles.arrowsdiv} style={{"margin-right":"70px"}} onClick={() => plusSlides(-1)}>
-              <div className={styles.leftarrow}></div>
-              <p className={styles.oldnew}>Older</p>
+            <div className={styles.centerarrow}>
+              <div className={styles.arrowsdiv1} style={{"margin-right":"70px"}} onClick={() => plusSlides(-1)}>
+                <div className={styles.leftarrow}></div>
+                <p className={styles.oldnew}>Older</p>
+              </div>
+
+              <div className={styles.arrowsdiv2mobile} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
+                <div className={styles.rightarrow}></div>
+                <p className={styles.oldnew}>Newer</p>
+              </div>
             </div>
 
             <div className={styles.expsections}>
@@ -331,7 +345,7 @@ export default function Home() {
 
 
             </div>
-            <div className={styles.arrowsdiv} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
+            <div className={styles.arrowsdiv2} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
               <div className={styles.rightarrow}></div>
               <p className={styles.oldnew}>Newer</p>
             </div>
@@ -342,19 +356,19 @@ export default function Home() {
 
         <section id = "Education" className={styles.education}>
           <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(40,40,40)", "padding-bottom":"80px", "text-align":"center"}}>Education</h1>
-          <div className={styles.timeline} style={{"padding-bottom":"75px"}}>
+          <div className={styles.timeline} style={{"padding-bottom":"75px", "padding-left":"40px", "padding-right":"40px"}}>
             <div className={styles.lineeducation}>
             </div>
             <div className={styles.paraboxtime} style={{"padding-right":"0px"}}>
               <div className={styles.educbox}>
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
-                      <p className={styles.projpara} style={{"color":"rgb(210, 110, 0)", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
-                      <p className={styles.projpara} style={{"color":"rgb(210, 110, 0)", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor's degree in Computer Science and a minor in Data Science.</p>
+                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
+                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor's degree in Computer Science and a minor in Data Science.</p>
                 </div>
                 <div>
                 <a href="https://www.virginia.edu/" target="_blank">
-                    <img src="uva.png" className={styles.schoolpics}></img>
+                    <img alt="uva logo" src="uva.png" className={styles.schoolpics}></img>
                 </a>               
                 </div>
               </div>
@@ -362,12 +376,12 @@ export default function Home() {
               <div className={styles.educbox}>
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>Deep Run High School</h1>
-                      <h2 style={{"color":"rgb(40, 40, 40)", "font-size":"19px", "font-weight":"bold", "padding-left": "20px"}}>Center for Information Technology</h2>
-                      <p className={styles.projpara} style={{"color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-right":"50px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492 in my class.</p>
+                      <h2 style={{"color":"rgb(40, 40, 40)", "max-width":"420px", "font-size":"19px", "font-weight":"bold", "padding-left": "20px"}}>Center for Information Technology</h2>
+                      <p className={styles.projpara2} style={{"max-width":"420px", "color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-right":"50px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492 in my class.</p>
                 </div>
                 <div>
                 <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank">
-                    <img src="dr.png" className={styles.schoolpics}></img>
+                    <img alt="deep run logo" src="dr.png" className={styles.schoolpics}></img>
                 </a>
                 </div>
               </div>

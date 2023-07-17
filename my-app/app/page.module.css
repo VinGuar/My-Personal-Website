@@ -1,9 +1,14 @@
 .hello {
     font-size: 40px;
-    color: rgb(80, 80, 80);
+    color: rgb(63, 136, 197);
     text-align: center;
     margin-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
+
+}
+
+.everything{
+    max-width: 100vw;
 }
 
 .cursor {
@@ -13,6 +18,58 @@
             animation: blink .4s linear infinite alternate;
 
 }
+
+.imgtest{
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+        drop-shadow(-1px -s1px 0 rgb(0, 0, 0));
+    filter: drop-shadow(1px 0px 5px rgba(63, 136, 197))
+            drop-shadow(1px 0px 5px rgba(63, 136, 197)); 
+    align-self: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    -webkit-animation: surf 10s infinite;
+            animation: surf 10s infinite;
+    width: 400px;
+    height: 434px;
+    overflow-x: hidden;
+
+}
+
+
+
+@-webkit-keyframes surf {
+    0% {transform: rotate(0deg);}
+    9% {transform: rotate(10deg);}
+    18% {transform: rotate(-10deg);}
+    27% {transform: rotate(10deg);}
+    36% {transform: rotate(-10deg);}
+    45% {transform: rotate(10deg);}
+    54% {transform: rotate(-10deg);}
+    63% {transform: rotate(10deg);}
+    72% {transform: rotate(-10deg);}
+    81% {transform: rotate(10deg);}
+    90% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+
+  }
+
+
+
+@keyframes surf {
+    0% {transform: rotate(0deg);}
+    9% {transform: rotate(10deg);}
+    18% {transform: rotate(-10deg);}
+    27% {transform: rotate(10deg);}
+    36% {transform: rotate(-10deg);}
+    45% {transform: rotate(10deg);}
+    54% {transform: rotate(-10deg);}
+    63% {transform: rotate(10deg);}
+    72% {transform: rotate(-10deg);}
+    81% {transform: rotate(10deg);}
+    90% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+
+  }
 
 @-webkit-keyframes blink {
     0% {opacity: 1;}
@@ -28,33 +85,52 @@
     100% {opacity: 0;}
   }
 
+  .iam{
+    margin-bottom: 0px;
+    font-weight: 800;
+    overflow-wrap: break-word;
+    padding-right: 25px;
+    color:rgb(63, 136, 197);
+    font-weight: 500;
+    font-size: 45px;
+    padding-top: 2px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
 .vincent {
-    font-size: 40px;
-    color: rgb(80, 80, 80);
+    color: rgb(18, 102, 79);
     text-align: center;
     margin-bottom: 0px;
-
+    font-weight: 800;
+    font-size: 45px;
+    overflow-wrap: break-word;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .container {
     display:flex;
     flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
 }
 
 .top {
-    background-color: rgb(220, 220, 220);    
     display: flex;
-    justify-content: space-evenly;
+    background-color: rgb(221, 221, 221);
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    height: 102vh;
-
-
+    gap: 250px;
+    min-height: 102vh;
+    background-color:#fff;
+    background-image:radial-gradient(transparent 0%, rgb(220,220,220) 70%, rgb(220,220,220) 100%, transparent 0%), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAIklEQVQoU2N89+7dfwYsQEhIiBEkzDgkFGDzAbIY2Cv4AACvrBgJjYNGfwAAAABJRU5ErkJggg==);
+    background-attachment: fixed;
 }   
 
 
@@ -66,7 +142,7 @@
     flex-wrap: wrap;
     align-items: stretch;
     min-height:  150vh;
-    outline: 1px solid rgb(120, 120, 120);
+    outline: 2px solid rgb(150, 195, 255);
 
 }
 
@@ -118,9 +194,11 @@
   }
 
 .aboutheaders{
-    color: rgb(224, 224, 224);
+    color: rgb(150, 195, 255);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .aboutline{
@@ -129,7 +207,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     border-top: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(255, 255, 255);
     border-top-width: 2px;
 
 }
@@ -196,7 +274,7 @@
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: bold;
-    background: linear-gradient(to left, rgb(230, 230, 230) 50%, rgb(150, 150, 150) 50%);
+    background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(150, 195, 255) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 1s ease;
@@ -228,6 +306,8 @@
 	        filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
     padding-top: 30px;
     padding-bottom: 30px;
+    color: hsl(0, 76%, 42%);
+
 
 }
 
@@ -239,12 +319,12 @@
 
 .projects{
     border-top: solid;
-    border-color: black;
-    border-top-width: 1px;
-    background-image: linear-gradient(45deg, transparent 20%, rgb(201, 201, 201) 25%, transparent 25%),
-                      linear-gradient(-45deg, transparent 20%, rgb(201, 201, 201) 25%, transparent 25%),
-                      linear-gradient(-45deg, transparent 75%, rgb(201, 201, 201) 80%, transparent 0),
-                      radial-gradient(rgb(201, 201, 201) 1px, transparent 0);   
+    border-color: rgb(150, 195, 255);
+    border-top-width: 2px;
+    background-image: linear-gradient(45deg, transparent 20%,  rgb(176, 217, 255) 25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 20%,  rgb(176, 217, 255) 25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 75%,  rgb(176, 217, 255) 80%, transparent 0),
+                      radial-gradient( rgb(176, 217, 255) 1px, transparent 0);   
     background-size: 30px 30px, 30px 30px;
     background-color: rgb(230, 230, 230);
     background-attachment: fixed;
@@ -253,6 +333,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-top: 50px;
+
 }
 
 .animator{
@@ -273,7 +354,7 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 130px;
-
+    overflow: hidden;
 }
 
 .projsecright {
@@ -300,7 +381,21 @@
 
 .projpara{
     border-bottom: solid;
-    border-color: black;
+    border-color: rgb(10, 36, 99);
+    border-bottom-width: 1px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    max-width: 420px;
+    padding-right: 75px;
+    padding-bottom: 30px;
+    word-spacing: 5px;
+    letter-spacing: 2.5px;
+    line-height: 25px;
+}
+
+.projpara2{
+    border-bottom: solid;
+    border-color: rgb(10, 36, 99);
     border-bottom-width: 1px;
     flex-wrap: wrap;
     font-size: 18px;
@@ -319,7 +414,7 @@
     padding-left: 75px;
     padding-right: 75px;
     border-radius: 50px;
-    background: linear-gradient(to left, rgb(240, 240, 240) 50%, rgb(80, 80, 80) 50%);
+    background: linear-gradient(to left, rgba(197, 220, 255, 0.514) 50%, rgb(10, 36, 99) 50%);
     background-size: 200% 100%;
     background-position: right;
     transition: all 1s ease;
@@ -330,7 +425,7 @@
 
 .buttonproj:hover{
     background-position: left;
-    color: rgb(240, 240, 240);
+    color: rgb(255, 255, 255);
     
 }
 
@@ -353,6 +448,9 @@
     flex-direction: column;
     padding-left: 75px;
     padding-right: 75px;
+    overflow-x: hidden;
+    max-width: 100%;
+
 
 
 }
@@ -363,9 +461,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
-    flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
+    flex-wrap: nowrap;
+    max-width: 100%;
 
 }
 
@@ -473,14 +572,23 @@
     height: 100%;
     width: 100%;
     transform: scale(.8);
-    color: aliceblue;
 }
 
 
-.arrowsdiv{
+.arrowsdiv1{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.arrowsdiv2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrowsdiv2mobile{
+    display: none;
 }
 
 .oldnew{
@@ -583,6 +691,7 @@
     gap: 30px;
     position: -webkit-sticky;
     position: sticky;
+
 }
 
 .line{
@@ -629,11 +738,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .educbox{
     display: flex;
-    gap: 0px;
+    gap: 10px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -691,17 +801,7 @@
     flex-direction: column;
 }
 
-@media screen and (max-width: 1150px) {
-    .projsecright {
-      padding-left: 50px;
-    }
-    .projsecleft {
-        padding-right: 50px;
-      }
 
-
-    
-  }
 
 @media screen and (max-width:1350px) {
     .projsecright {
@@ -713,14 +813,343 @@
     .projpara{
         max-width: 400px;
     }
+    .top{
+        gap: 150px;
+    }
+
+    .imgtest{
+        width: 350px;
+        height: 379px;
+    }
 }
+
+  @media screen and (max-width:1150px) {
+    .imgtest{
+        width: 300px;
+        height: 327px;
+    }
+    .top{
+        gap: 100px;
+    }
+    .projsecright {
+        padding-left: 50px;
+      }
+      .projsecleft {
+          padding-right: 50px;
+        }
+  .vincent{
+    font-size: 40px;
+  }
+  .iam{
+    font-size: 40px;
+  }
+  .hello{
+    font-size: 35px;
+  }
+  .cursor{
+    font-size: 45px;
+  }
+}
+
+
+
 
 @media screen and (max-width:1050px) {
     .projpara{
         max-width: 250px;
     }
+    .top{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .imgtest{
+        padding-top: 0px;
+        width: 250px;
+        height: 270px;
+
+    }
+    .container{
+        padding-bottom: 0px;
+
+    }
+    .hello{
+        margin-bottom: -30px;
+        margin-top: 20px;
+    }
+
+    .vincent{
+        margin-bottom: -20px;
+  
+    }
+    .iam{
+        margin-bottom: -20px;
+  
+    }
+
+    
+    .indexpsec{
+        margin-left: -15px;
+        margin-right: -15px;
+
+    }
+
+    .projpara{
+        padding-right: 50px;
+    }
+
+
+}
+
+@media screen and (max-width:1000px) {
+    .experience{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .arrowsdiv{
+        margin: 0px;
+    }
+
+    
+    .indexpsec{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+}
+
+
+@media screen and (max-width:900px) {
+    .abouttext{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .projsecleft{
+        padding-left: 20px;
+    }
+
+    .projsecright{
+        padding-right: 20px;    
+    }
+
+    .buttonproj{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    
+    .indexpsec{
+        margin-left: -35px;
+        margin-right: -35px;
+    }
+
+    .educbox{
+        gap: 0px;
+    }
+
+}
+
+
+@media screen and (max-width:800px) {
+    .abouttext{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .projpara{
+        padding-right: 25px;
+    }
+
+    .projsecleft{
+        gap: 75px;
+    }
+
+    .projsecright{
+        gap: 75px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width:755px){
+    .container{
+        padding-top: 0px;
+    }
+    .vincent{
+        font-size: 35px;
+      }
+      .iam{
+        font-size: 35px;
+      }
+      .hello{
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+    .top{
+        gap: 30px;
+    }
+    .cursor{
+        font-size: 40px;
+      }
+
+    .about{
+        flex-direction: column;
+    }
+    .aboutmain{
+        order: 1;
+        background-image: none;
+        background-color: black;
+    }
+    .stick{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .aboutsections{
+        order: 2;
+        margin-top: 0px;
+    }
+    .aboutind{
+        min-height: 0px;
+    }
+    .projsecleft{
+        flex-direction: column;
+        padding-right: 0px;
+        padding-left: 0px;
+
+        
+    }
+    .projsecright{
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px;
+
+
+    }
+    .projorder1{
+        order: 1;
+
+    }
+    .projorder2{
+        order: 2;
+        align-items: flex-end;
+    }
+    .projpara{
+        margin-bottom: -50px;
+        border-bottom: none;
+        text-align: center;
+        max-width: none;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .buttonproj{
+        margin-top: -50px;
+        padding: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+    }
+    .experiencemain{
+        flex-direction: column;
+    }
+
+    .dotsmobile{
+        margin-bottom: -62px;
+    }
+
+    .arrowsdiv2mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .centerarrow{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .arrowsdiv2{
+        display: none;
+    }
+    
+    .expsections{
+        order: 2;
+    }
+
+    .projpara2{
+        padding-right: 0px !important;
+    }
+
+    .educbox{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .schoolpics{
+        padding-left: 20px;
+        padding-bottom: 50px;
+        margin-top: -10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .indexpsec{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .expsections{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @media screen and (max-width:500px) {
+    .expsections{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .top{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .timeline{
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .indexpsec{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .expsections{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .vincent{
+        font-size: 30px;
+        padding-right: 10px;
+      }
+      .iam{
+        font-size: 30px;
+        padding-left: 10px
+      }
+      .hello{
+        font-size: 25px;
+      }
+      .cursor{
+        font-size: 35px;
+      }
 
 }
