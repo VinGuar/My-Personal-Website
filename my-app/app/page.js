@@ -167,7 +167,7 @@ export default function Home() {
                 <img alt="vincent as detective skills" src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
                 <h1 className={styles.aboutheaders} >Skills</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web design/development, SEO, JavaScript, and a range of other technologies.</p>
+                <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web Design/Development, SEO, JavaScript, and a range of other technologies.</p>
               </motion.div>  
             </div>  
             <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
