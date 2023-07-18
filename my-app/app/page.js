@@ -224,7 +224,7 @@ export default function Home() {
                 <img alt="puppy eyes dog and vincent" src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
                 <h1 className={styles.aboutheaders}>Why Me?</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>I am dedicated, hard-working, and will never shy away from a challenge. Also, I always constantly seek to learn and adapt to the ever-evolving times.</p>
+                <p className={styles.abouttext}>I am dedicated, hard-working, and will never shy away from a challenge. Also, I always constantly seek to learn and adapt to the ever-evolving times!.</p>
               </motion.div>
             </div>
           </div>
