@@ -203,7 +203,7 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div style ={{"outline": "1px solid rgb(181, 213, 255)"}}>      
+            <div className={styles.fixmargin} style ={{"outline": "1px solid rgb(181, 213, 255)"}}>      
               <motion.div ref={refsec4} animate={{opacity: inViewsec4 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>    
                 <img alt="vincent with halo on" src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
                 <h1 className={styles.aboutheaders}>Values</h1>
@@ -211,7 +211,7 @@ export default function Home() {
                 <p className={styles.abouttext}>I strive to live by four core values: treating others with kindness, practicing honesty, working as hard as I can, and finding joy in everything I do.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(150, 195, 255)"}}>      
+            <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(150, 195, 255)"}}>      
               <motion.div ref={refsec5} animate={{opacity: inViewsec5 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)"}}>    
                 <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
@@ -219,7 +219,7 @@ export default function Home() {
                 <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
+            <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
               <motion.div ref={refsec6} animate={{opacity: inViewsec6 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)"}}>          
                 <img alt="puppy eyes dog and vincent" src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
                 <h1 className={styles.aboutheaders}>Why Me?</h1>

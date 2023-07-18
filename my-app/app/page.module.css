@@ -1008,7 +1008,9 @@
         padding-bottom: 10px;
     }
     .fixmargin{
-        margin-right: 0px !important;
+        outline: none;
+        border-color: rgb(150, 195, 255);
+        border-top-width: 1px solid;
     }
     .aboutsections{
         order: 2;
