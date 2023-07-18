@@ -162,7 +162,7 @@ export default function Home() {
 
 
           <div className={styles.aboutsections}>
-            <div style ={{"margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>
+            <div className={styles.fixmargin} style ={{"margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>
               <motion.div ref={refsec1} animate={{opacity: inViewsec1 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>          
                 <img alt="vincent as detective skills" src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
                 <h1 className={styles.aboutheaders} >Skills</h1>
@@ -170,7 +170,7 @@ export default function Home() {
                 <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web design/development, SEO, JavaScript, and a range of other technologies.</p>
               </motion.div>  
             </div>  
-            <div style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
+            <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
               <motion.div ref={refsec2} animate={{opacity: inViewsec2 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "2" >          
                 <img alt="vincent presenting in meeting" src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
                 <h1 className={styles.aboutheaders}>Professional Interests</h1>
@@ -178,7 +178,7 @@ export default function Home() {
                 <p className={styles.abouttext}>My primary passions lie in programming, developing, machine learning, AI, full-stack development, collaborative teamwork, and all things computer-related.</p>
               </motion.div>
             </div>
-            <div style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255"}}>
+            <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255"}}>
               <motion.div ref={refsec3} animate={{opacity: inViewsec3 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "3">    
                 <img alt="vincent being curious" src="hm.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Why These Interests?</h1>
