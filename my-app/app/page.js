@@ -313,7 +313,6 @@ export default function Home() {
                   </div>
                   <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
-
                       <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
                       <h5 className={styles.date}>05/22 - 08/22</h5>
                       <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees&apos; software and hardware problems.</p>
