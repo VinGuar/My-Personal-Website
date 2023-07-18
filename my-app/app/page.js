@@ -129,7 +129,7 @@ export default function Home() {
             <div className = {styles.hello}>
             <Typewriter clasName = {styles.hello}
                   options={{
-                    strings: ['Hello World!', '¡Hola Mundo!', 'नमस्ते दुनिया!', '你好世界!'],
+                    strings: ['Hello World!', '¡Hoala Mundo!', 'नमस्ते दुनिया!', '你好世界!'],
                     delay: 85,
                     deleteSpeed: 50,
                     autoStart: true,
