@@ -216,7 +216,7 @@ export default function Home() {
                 <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature's beauty, and cherishing time with friends and family.</p>
+                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family.</p>
               </motion.div>
             </div>
             <div style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
@@ -317,7 +317,7 @@ export default function Home() {
                     <div>
                       <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
                       <h5 className={styles.date}>05/22 - 08/22</h5>
-                      <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees' software and hardware problems.</p>
+                      <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees&apos; software and hardware problems.</p>
                     </div>
                   </div>
                 </div>           
@@ -364,7 +364,7 @@ export default function Home() {
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
                       <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
-                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor's degree in Computer Science and a minor in Data Science.</p>
+                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor&apos;s degree in Computer Science and a minor in Data Science.</p>
                 </div>
                 <div>
                 <a href="https://www.virginia.edu/" target="_blank">
