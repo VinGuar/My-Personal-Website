@@ -1007,6 +1007,9 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .fixmargin{
+        margin-right: 0px !important;
+    }
     .aboutsections{
         order: 2;
         margin-top: 0px;
