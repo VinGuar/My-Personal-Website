@@ -216,7 +216,7 @@ export default function Home() {
                 <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family.</p>
+                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family!</p>
               </motion.div>
             </div>
             <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
