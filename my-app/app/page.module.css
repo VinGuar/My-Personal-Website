@@ -19,10 +19,10 @@
 }
 
 .imgtest{
-    -webkit-filter: drop-shadow(1px 1px 0 black)
-        drop-shadow(-1px -s1px 0 rgb(0, 0, 0));
-    filter: drop-shadow(1px 0px 5px rgba(63, 136, 197))
-            drop-shadow(1px 0px 5px rgba(63, 136, 197)); 
+    -webkit-filter: drop-shadow(1px 0px 5px rgba(63, 136, 197))
+            drop-shadow(1px 0px 5px rgba(63, 136, 197));
+    filter: drop-shadow(1px 0px 5px rgb(243, 243, 243))
+            drop-shadow(1px 0px 5px rgb(255, 255, 255)); 
     align-self: center;
     padding-bottom: 100px;
     padding-top: 100px;
