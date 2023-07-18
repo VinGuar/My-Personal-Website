@@ -305,8 +305,6 @@ export default function Home() {
 
             <div className={styles.expsections}>
 
-              
-
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
                 <h1 className={styles.expheader}>James River Equipment</h1>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
@@ -315,7 +313,7 @@ export default function Home() {
                   </div>
                   <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
-                      
+
                       <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
                       <h5 className={styles.date}>05/22 - 08/22</h5>
                       <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees&apos; software and hardware problems.</p>
