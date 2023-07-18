@@ -11,7 +11,7 @@
 }
 
 .cursor {
-    height: 99px;
+    height: 19px;
     font-size: 50px;
     -webkit-animation: blink .4s linear infinite alternate;
             animation: blink .4s linear infinite alternate;
