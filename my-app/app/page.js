@@ -308,7 +308,7 @@ export default function Home() {
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
                 <h1 className={styles.expheader}>James River Equipment</h1>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
-                <div className={styles.timeline}>
+                <div className={styles.timeline2}>
                   <div className={styles.line}>
                   </div>
                   <div style={{"display":"flex", "flex-direction":"column"}}>
@@ -324,7 +324,7 @@ export default function Home() {
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
                 <h1 className={styles.expheader}>Scribe On Demand</h1>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(newest)</h3>
-                <div className={styles.timeline}>
+                <div className={styles.timeline2}>
                   <div className={styles.line}></div>
                   <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
