@@ -1008,10 +1008,6 @@
         padding-bottom: 10px;
     }
     .fixmargin{
-        outline: none;
-        border-top: solid;
-        border-color: rgb(150, 195, 255);
-        border-top-width: 1px;
         margin-right: 0px !important;
     }
     .aboutsections{
