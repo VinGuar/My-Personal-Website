@@ -1121,6 +1121,9 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+    .timeline{
+        padding-left: 15px !important;
+    }
 }
 
 @media screen and (max-width:400px) {
