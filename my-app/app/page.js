@@ -306,7 +306,7 @@ export default function Home() {
             <div className={styles.expsections}>
 
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
-                <h1 className={styles.expheader} href="https://www.jamesriverequipment.com/">James River Equipment</h1>
+                <h1 href="https://www.jamesriverequipment.com/" target="_blank" className={styles.expheader} >James River Equipment</h1>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
                 <div className={styles.timeline}>
                   <div className={styles.line}>
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
               
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
-                <h1 className={styles.expheader} href="https://www.scribeondemand.com/" >Scribe On Demand</h1>
+                <h1 href="https://www.scribeondemand.com/" target="_blank" className={styles.expheader}>Scribe On Demand</h1>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(newest)</h3>
                 <div className={styles.timeline}>
                   <div className={styles.line}></div>
