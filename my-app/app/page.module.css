@@ -672,6 +672,10 @@
 
 }
 
+.expminiheaders:hover{
+    transform: scale(1.1);
+}
+
 .expminiheaders::before{
     content: "";
     width: 22px;
