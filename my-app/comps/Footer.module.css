@@ -20,7 +20,8 @@
     color: rgb(220, 220, 220);
     margin-bottom: 0px;
     font-size: 18px;
-    text-decoration: dotted;
+    -webkit-text-decoration: dotted;
+            text-decoration: dotted;
 }
 
 .footerline{
