@@ -193,7 +193,7 @@ export default function Home() {
             <div className={styles.stick}>
               <h1 className={styles.aboutmainword} style={{"color":"rgb(150, 195, 255)"}}>About Me!</h1>
 
-              <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" style ={{"align-items":"center"}}target="_blank">
+              <a href="resume.pdf" style ={{"align-items":"center"}}target="_blank">
                 <button  className={styles.buttonresume}>Résumé</button>
               </a>
 
