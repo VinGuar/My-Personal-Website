@@ -675,6 +675,7 @@
 .expheader:hover{
     transform: scale(1.1);
     cursor: pointer;
+    transition: .2s ease-in-out;
 }
 
 .expminiheaders::before{

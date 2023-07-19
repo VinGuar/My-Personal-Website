@@ -306,7 +306,9 @@ export default function Home() {
             <div className={styles.expsections}>
 
               <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
-                <h1 href="https://www.jamesriverequipment.com/" target="_blank" className={styles.expheader} >James River Equipment</h1>
+                <a href="https://www.jamesriverequipment.com/" target="_blank" >
+                  <h1 className={styles.expheader} >James River Equipment</h1>
+                </a>
                 <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
                 <div className={styles.timeline}>
                   <div className={styles.line}>
