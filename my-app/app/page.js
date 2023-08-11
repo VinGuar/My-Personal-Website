@@ -259,7 +259,7 @@ export default function Home() {
                 </a>
                 <div className={styles.projorder1}>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Recipe Matchmaker Web App</p>
-                  <p className={styles.projpara}>Web app that tailors recipes to individuals' ingredients, prep time, and preferences from almost 200,000 total recipes. Utilizes a Next.JS frontend and FastAPI backend.</p>
+                  <p className={styles.projpara}>Web app that tailors recipes to individuals&apos; ingredients, prep time, and preferences from almost 200,000 total recipes. Utilizes a Next.JS frontend and FastAPI backend.</p>
                 </div>
 
               </motion.div>
