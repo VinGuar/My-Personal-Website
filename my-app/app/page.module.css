@@ -823,9 +823,7 @@
       .projsecleft {
           padding-right: 50px;
     }
-    .projpara{
-        max-width: 400px;
-    }
+
     .top{
         gap: 150px;
     }
@@ -840,6 +838,9 @@
     .imgtest{
         width: 300px;
         height: 327px;
+    }
+    .projpara{
+        max-width: 400px;
     }
     .top{
         gap: 100px;
@@ -964,7 +965,7 @@
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:810px) {
     .abouttext{
         margin-left: 10px;
         margin-right: 10px;
@@ -987,7 +988,7 @@
 }
 
 
-@media screen and (max-width:755px){
+@media screen and (max-width:760px){
     .container{
         padding-top: 0px;
     }

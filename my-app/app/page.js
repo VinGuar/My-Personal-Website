@@ -254,29 +254,30 @@ export default function Home() {
 
               <motion.div ref={ref2} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView2 ? 0 : 180, opacity: inView2 ? 1 : 0}} transition={{type:"spring", duration: inView2 ? 0.8 : 0}} className={styles.projsecright} style={{}}>
 
-                <a className={styles.projorder2} href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
-                  <button className={styles.buttonproj}>Click Me to View!</button>
+                <a className={styles.projorder2} href ="https://www.recipematchmaker.com/" target="_blank">
+                  <button className={styles.buttonproj}>Click to See Site!</button>
                 </a>
                 <div className={styles.projorder1}>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>NBA Player Grader</p>
-                  <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Recipe Matchmaker Web App</p>
+                  <p className={styles.projpara}>Web app that tailors recipes to individuals' ingredients, prep time, and preferences from almost 200,000 total recipes. Utilizes a Next.JS frontend and FastAPI backend.</p>
                 </div>
 
               </motion.div>
               
-              {/*
+              
               <motion.div ref={ref3} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView3 ? 0 : 180, opacity: inView3 ? 1 : 0}} transition={{type:"spring", duration: inView3 ? 0.8 : 0}} className={styles.projsecleft} style={{}}>
 
                 <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px"}}>Fantasy Football Ranker</p>
-                  <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
+                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>NBA Player Grader</p>
+                  <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
                 </div>  
-                <a href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target="_blank">
+                <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
                   <button className={styles.buttonproj}>Click Me to View!</button>
                 </a>
 
+
               </motion.div>
-                */}
+                
             </div>
 
           </div>
