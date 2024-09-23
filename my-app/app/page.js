@@ -216,7 +216,7 @@ export default function Home() {
                 <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
                 <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Just to list a few: I love playing and watching sports, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family!</p>
+                <p className={styles.abouttext}>Just to list a few: I love sports, poker, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family!</p>
               </motion.div>
             </div>
             <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
@@ -366,7 +366,7 @@ export default function Home() {
               <div className={styles.educbox}>
                 <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
-                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>First-year student at UVA</p>
+                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>Second-year student at UVA</p>
                       <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor&apos;s degree in Computer Science and a minor in Data Science.</p>
                 </div>
                 <div>
