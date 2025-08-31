@@ -58,14 +58,18 @@ export default function Home() {
 
   {/*js for slideshow*/}
   const [isOn1, setShow1] = useState(false);
-  const [isOn2, setShow2] = useState(true);
+  const [isOn2, setShow2] = useState(false);
+  const [isOn3, setShow3] = useState(false);
+  const [isOn4, setShow4] = useState(true);
 
   const [isOnbt1, setShowbt1] = useState(true);
   const [isOnbt2, setShowbt2] = useState(true);
+  const [isOnbt3, setShowbt3] = useState(true);
+  const [isOnbt4, setShowbt4] = useState(false);
 
   const slidesRef = useRef([]);
   const dotsRef = useRef([]);
-  const [slideIndex, setSlideIndex] = useState(2);
+  const [slideIndex, setSlideIndex] = useState(4);
 
 
   useEffect(() => {
@@ -98,9 +102,13 @@ export default function Home() {
       
     setShow1(current => false);
     setShow2(current => false);
+    setShow3(current => false);
+    setShow4(current => false);
 
-    setShowbt2(current => true);
     setShowbt1(current => true);
+    setShowbt2(current => true);
+    setShowbt3(current => true);
+    setShowbt4(current => true);
     
 
     if (slideIndex==1){
@@ -109,7 +117,12 @@ export default function Home() {
     } else if (slideIndex==2){
       setShow2(current => true);
       setShowbt2(current => false);
-
+    } else if (slideIndex==3){
+      setShow3(current => true);
+      setShowbt3(current => false);
+    } else if (slideIndex==4){
+      setShow4(current => true);
+      setShowbt4(current => false);
     }
 
   };
@@ -141,7 +154,10 @@ export default function Home() {
             </div>
             <div style={{"display":"flex", "flex-wrap":"wrap", "justify-content":"center", "align-items":"center", "text-align":"center"}}>
               <p className = {styles.iam}>I am</p>
-              <p className = {styles.vincent}> Vincent Guarnieri.</p>
+              <p className = {styles.vincent}> Vincent Guarnieri,</p>
+            </div>
+            <div style={{"display":"flex", "flex-wrap":"wrap", "justify-content":"center", "align-items":"center", "text-align":"center", "margin-top":"-10px"}}>
+              <p className = {styles.iam}>Software Engineer & AI Developer.</p>
             </div>
             <div className={styles.icons}>              
               <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
@@ -167,7 +183,7 @@ export default function Home() {
                 <img alt="vincent as detective skills" src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
                 <h1 className={styles.aboutheaders} >Skills</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Proficient in Python, HTML/CSS, Next.JS, Git, Java, Web Design/Development, SEO, JavaScript, and a range of other technologies.</p>
+                <p className={styles.abouttext}>Proficient in Python, SQL, RAG AI, NLP, JavaScript, Next.JS, HTML/CSS, Java, Git, Web Development, SEO, SCRUM, and machine learning technologies.</p>
               </motion.div>  
             </div>  
             <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
@@ -175,7 +191,7 @@ export default function Home() {
                 <img alt="vincent presenting in meeting" src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
                 <h1 className={styles.aboutheaders}>Professional Interests</h1>
                 <div className={styles.aboutline}></div> 
-                <p className={styles.abouttext}>My primary passions lie in programming, developing, machine learning, AI, full-stack development, collaborative teamwork, and all things computer-related.</p>
+                <p className={styles.abouttext}>My primary passions lie in artificial intelligence development, software engineering, machine learning, data analysis, full-stack development, and building innovative technology solutions.</p>
               </motion.div>
             </div>
             <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255"}}>
@@ -224,7 +240,7 @@ export default function Home() {
                 <img alt="puppy eyes dog and vincent" src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
                 <h1 className={styles.aboutheaders}>Why Me?</h1>
                 <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>I am dedicated, hard-working, and will never shy away from a challenge. Also, I always constantly seek to learn and adapt to the ever-evolving times.</p>
+                <p className={styles.abouttext}>I am a dedicated software engineer with proven experience in AI development, full-stack engineering, and product leadership. I consistently deliver high-quality solutions and excel in collaborative environments while continuously learning cutting-edge technologies.</p>
               </motion.div>
             </div>
           </div>
@@ -243,7 +259,7 @@ export default function Home() {
 
                 <div className={styles.projorder1}>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Fantasy Football Ranker</p>
-                  <p className={styles.projpara}>Python program that utilizes neural network machine learning to rank NFL fantasy football players within their respective positions.</p>
+                  <p className={styles.projpara}>Python program that uses neural network machine learning (Scikit-learn) to rank NFL fantasy football players within their respective positions. Excluding injuries, has more accurate predictions than main human rankings or other popular computer algorithms.</p>
                 </div>  
                 <a className={styles.projorder2} href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
                   <button className={styles.buttonproj}>Click Me to View!</button>
@@ -259,7 +275,7 @@ export default function Home() {
                 </a>
                 <div className={styles.projorder1}>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Recipe Matchmaker Web App</p>
-                  <p className={styles.projpara}>Web app that tailors recipes to individuals&apos; ingredients, prep time, and preferences from almost 200,000 total recipes. Utilizes a Next.JS frontend and FastAPI backend.</p>
+                  <p className={styles.projpara}>Web application that tailors recipes to individuals&apos; ingredients, prep time, and preferences from almost 200,000 total recipes. Uses a Next.JS frontend and FastAPI backend to handle the data.</p>
                 </div>
 
               </motion.div>
@@ -269,7 +285,7 @@ export default function Home() {
 
                 <div>
                   <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>NBA Player Grader</p>
-                  <p className={styles.projpara}>Python program that utilizes ridge regression machine learning to find which NBA stats predict wins best and then uses this to grade current/past NBA players.</p>
+                  <p className={styles.projpara}>Python program that uses ridge regression machine learning (Scikit-learn) and feature engineering to find which NBA stats predict wins best and then grades current/past NBA players. Has a very strong correlation between high player grades and high team win totals.</p>
                 </div>  
                 <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
                   <button className={styles.buttonproj}>Click Me to View!</button>
@@ -290,6 +306,8 @@ export default function Home() {
           <div className={styles.dotsmobile} style={{"display":"flex", "justify-content":"center", "padding-top":"0px"}}>
               <span onClick={() => currentSlide(1)} className={isOnbt1 ? styles.dot : styles.activeBt}></span> 
               <span onClick={() => currentSlide(2)} className={isOnbt2 ? styles.dot : styles.activeBt}></span> 
+              <span onClick={() => currentSlide(3)} className={isOnbt3 ? styles.dot : styles.activeBt}></span> 
+              <span onClick={() => currentSlide(4)} className={isOnbt4 ? styles.dot : styles.activeBt}></span> 
           </div>
           <div className={styles.experiencemain}>
             <div className={styles.centerarrow}>
@@ -318,29 +336,54 @@ export default function Home() {
                     <div>
                       <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
                       <h5 className={styles.date}>05/22 - 08/22</h5>
-                      <p className={styles.exppara}>Information Technology Intern that worked in a team as a help desk for company employees&apos; software and hardware problems.</p>
+                      <p className={styles.exppara}>Worked in a team as help desk for company employees&apos; software and hardware problems. Imaged and set up computers for employees.</p>
                     </div>
                   </div>
                 </div>           
               </div>
               
-              <div ref={(el) => (slidesRef.current[1] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
+              <div ref={(el) => (slidesRef.current[2] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
                 <a style={{"text-decoration":"none"}}  href="https://www.scribeondemand.com/" target="_blank">
                   <h1 className={styles.expheader}>Scribe On Demand</h1>
                 </a>
-                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(newest)</h3>
                 <div className={styles.timeline}>
                   <div className={styles.line}></div>
                   <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
                       <h3 className={styles.expminiheaders}>Web Developer and Digital Marketer</h3>
-                      <h5 className={styles.date}>06/21 - Present</h5>
-                      <p className={styles.exppara}>Fully built/developed and designed their website. Helped both Scribe and their clientele with digital marketing and SEO.</p>
+                      <h5 className={styles.date}>06/20 - 05/25</h5>
+                      <p className={styles.exppara}>Built, developed, and designed company website. Helped both Scribe and its clientele with personalized SEO reports and digital marketing.</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div ref={(el) => (slidesRef.current[3] = el)} className={isOn3 ? styles.indexpsec : styles.sechide}>
+                <a style={{"text-decoration":"none"}} href="https://bigstack.io" target="_blank">
+                  <h1 className={styles.expheader}>BigStack Poker</h1>
+                </a>
+                <div className={styles.timeline}>
+                  <div className={styles.line}></div>
+                  <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
-                      <h3 className={styles.expminiheaders}>Intern </h3>
-                      <h5 className={styles.date}>06/20 - 06/21</h5>
-                      <p className={styles.exppara}>Interned with various things like website design, SEO, and digital marketing.</p>
+                      <h3 className={styles.expminiheaders}>Co-Founder and CTO</h3>
+                      <h5 className={styles.date}>04/25 - Present</h5>
+                      <p className={styles.exppara}>Co-founded AI-powered poker coaching platform. Designed and implemented AI conversational agent using NLP and solver-backed analytics. Led end-to-end product development lifecycle.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div ref={(el) => (slidesRef.current[4] = el)} className={isOn4 ? styles.indexpsec : styles.sechide}>
+                <h1 className={styles.expheader}>Respondr</h1>
+                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(current)</h3>
+                <div className={styles.timeline}>
+                  <div className={styles.line}></div>
+                  <div style={{"display":"flex", "flex-direction":"column"}}>
+                    <div>
+                      <h3 className={styles.expminiheaders}>AI Developer and Data Analyst Intern</h3>
+                      <h5 className={styles.date}>05/25 - Present</h5>
+                      <p className={styles.exppara}>Developed RAG-based AI chatbot using LLMs for crisis-response automation. Performed data preprocessing, embedding, and vectorization using SQL databases. Collaborated in Agile/Scrum team.</p>
                     </div>
                   </div>
                 </div>
@@ -364,10 +407,10 @@ export default function Home() {
             </div>
             <div className={styles.paraboxtime} style={{"padding-right":"0px"}}>
               <div className={styles.educbox}>
-                <div className={styles.educationpara}>
+                                  <div className={styles.educationpara}>
                       <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
-                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>Second-year student at UVA</p>
-                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Currently pursuing a Bachelor&apos;s degree in Computer Science and a minor in Data Science.</p>
+                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>Current UVA student - GPA: 3.7</p>
+                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Pursuing a B.A. in Computer Science and Applied Statistics, expected graduation May 2027.</p>
                 </div>
                 <div>
                 <a href="https://www.virginia.edu/" target="_blank">
