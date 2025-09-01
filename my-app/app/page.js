@@ -219,7 +219,7 @@ export default function Home() {
             >
               <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className={styles.buttonresume}>
-                  📄 Download Resume
+                  📄 View Resume
                 </button>
               </a>
             </motion.div>
