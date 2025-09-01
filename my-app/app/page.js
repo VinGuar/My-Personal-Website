@@ -12,138 +12,150 @@ import { useInView } from 'react-intersection-observer';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
-
-
-{/* refs and inview for about me seciton*/}
-  const { ref: refsec1, inView: inViewsec1 } = useInView({
-    threshold: .5
+  // InView hooks for animations
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true
   });
 
-  const { ref: refsec2, inView: inViewsec2 } = useInView({
-    threshold: .5
+  const { ref: projectsRef, inView: projectsInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
   });
 
-  const { ref: refsec3, inView: inViewsec3 } = useInView({
-    threshold: .5
+  const { ref: experienceRef, inView: experienceInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
   });
 
-  const { ref: refsec4, inView: inViewsec4 } = useInView({
-    threshold: .5
+  const { ref: educationRef, inView: educationInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
   });
 
-  const { ref: refsec5, inView: inViewsec5 } = useInView({
-    threshold: .5
-  });
+  // Experience slideshow state
+  const [currentExperience, setCurrentExperience] = useState(5); // Start with most recent (Respondr)
+  const totalExperiences = 5;
 
-  const { ref: refsec6, inView: inViewsec6 } = useInView({
-    threshold: .5
-  });
+  const experiences = [
+    {
+      id: 1,
+      company: "James River Equipment",
+      role: "Information Technology Intern",
+      period: "05/2022 - 08/2022",
+      location: "Ashland, VA",
+      bullets: [
+        "Worked in a team as a help desk for company employees' software and hardware problems",
+        "Imaged and set up computers for employees",
+        "Completed various tasks like inventory, shipping, organizing, etc."
+      ],
+      link: "https://www.jamesriverequipment.com/",
+      isOldest: true
+    },
+    {
+      id: 2,
+      company: "Chuy's",
+      role: "Waiter",
+      period: "05/2024 - 08/2024",
+      location: "Glen Allen, Virginia",
+      bullets: [],
+      isSimple: true
+    },
+    {
+      id: 3,
+      company: "Scribe On Demand",
+      role: "Web Developer and Digital Marketer",
+      period: "06/2020 - 05/2025",
+      location: "Richmond, VA",
+      description: "A full-service content marketing agency that builds brands, establishes thought leaders, and creates audiences.",
+      bullets: [
+        "Built, developed, and designed company website",
+        "Helped both Scribe and its clientele with personalized SEO reports",
+        "Assisted in identifying relevant content ideas to successfully market both Scribe and its clientele"
+      ],
+      link: "https://www.scribeondemand.com/"
+    },
+    {
+      id: 4,
+      company: "BigStack Poker",
+      role: "Co-Founder and CTO",
+      period: "04/2025 - Present",
+      description: "AI-powered poker coaching platform providing real-time stat tracking, leak detection, and solver-backed feedback. URL: bigstack.io",
+      bullets: [
+        "Co-founded a data-driven poker startup leveraging AI, stat tracking, and data analysis to deliver personalized coaching",
+        "Designed and implemented an AI-powered conversational agent for poker strategy using natural language processing (NLP) and solver-backed analytics",
+        "Led end-to-end product development lifecycle (requirements gathering, prototyping, model evaluation, and deployment)"
+      ],
+      link: "https://bigstack.io"
+    },
+    {
+      id: 5,
+      company: "Respondr",
+      role: "AI Developer and Data Analyst Intern",
+      period: "05/2025 - Present",
+      location: "Richmond, VA",
+      description: "AI platform that equips schools and organizations with real-time, plan-based crisis and incident response tools.",
+      bullets: [
+        "Developed a Retrieval-Augmented Generation (RAG) based AI chatbot using LLMs (Large Language Models) for crisis-response automation",
+        "Performed data preprocessing, embedding, and vectorization of emergency response plan data, utilizing SQL databases",
+        "Collaborated in an Agile/Scrum team to align development milestones with business goals",
+        "Asked to continue working part-time through school year and winter break as a result of job performance"
+      ],
+      isCurrent: true
+    }
+  ];
 
-
-
-
-  {/* refs and inview for project seciton*/}
-  const { ref: ref1, inView: inView1 } = useInView({
-    threshold: .1
-  });
-  
-  const { ref: ref2, inView: inView2 } = useInView({
-    threshold: .1
-  });
-
-  const { ref: ref3, inView: inView3 } = useInView({
-    threshold: .1
-  });
-
-
-  {/*js for slideshow*/}
-  const [isOn1, setShow1] = useState(false);
-  const [isOn2, setShow2] = useState(false);
-  const [isOn3, setShow3] = useState(false);
-  const [isOn4, setShow4] = useState(true);
-
-  const [isOnbt1, setShowbt1] = useState(true);
-  const [isOnbt2, setShowbt2] = useState(true);
-  const [isOnbt3, setShowbt3] = useState(true);
-  const [isOnbt4, setShowbt4] = useState(false);
-
-  const slidesRef = useRef([]);
-  const dotsRef = useRef([]);
-  const [slideIndex, setSlideIndex] = useState(4);
-
-
-  useEffect(() => {
-    showSlides(slideIndex);
-  }, [slideIndex]);
-
-  const plusSlides = (n) => {
-    setSlideIndex(slideIndex + n);
+  const nextExperience = () => {
+    setCurrentExperience((prev) => (prev < totalExperiences ? prev + 1 : 1));
   };
 
-  const currentSlide = (n) => {
-    setSlideIndex(n);
+  const prevExperience = () => {
+    setCurrentExperience((prev) => (prev > 1 ? prev - 1 : totalExperiences));
   };
 
-  const showSlides = (n) => {
-    let i;
-    const slides = slidesRef.current;
-    const dots = dotsRef.current;
-
-    if (n > slides.length) {
-      setSlideIndex(slides.length);
-      return;
-    }
-
-    if (n < 1) {
-      setSlideIndex(1);
-      return;
-    }
-    console.log(slideIndex)
-      
-    setShow1(current => false);
-    setShow2(current => false);
-    setShow3(current => false);
-    setShow4(current => false);
-
-    setShowbt1(current => true);
-    setShowbt2(current => true);
-    setShowbt3(current => true);
-    setShowbt4(current => true);
-    
-
-    if (slideIndex==1){
-      setShow1(current => true);
-      setShowbt1(current => false);
-    } else if (slideIndex==2){
-      setShow2(current => true);
-      setShowbt2(current => false);
-    } else if (slideIndex==3){
-      setShow3(current => true);
-      setShowbt3(current => false);
-    } else if (slideIndex==4){
-      setShow4(current => true);
-      setShowbt4(current => false);
-    }
-
+  const goToExperience = (index) => {
+    setCurrentExperience(index);
   };
 
-  
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
 
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardHover = {
+    rest: { scale: 1, y: 0 },
+    hover: { scale: 1.02, y: -8, transition: { duration: 0.3 } }
+  };
 
   return (
     <main className={styles.everything}>
       <Navbar />
       <div className={styles.whole}>
 
-        <section id = "Start" className={styles.top}>
-
+        {/* Hero Section */}
+        <section id="Start" className={styles.top}>
           <div className={styles.container}>
-            
-            <div className = {styles.hello}>
-            <Typewriter clasName = {styles.hello}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className={styles.hello}
+            >
+              <Typewriter
                   options={{
-                    strings: ['Hello World!', '¡Hola Mundo!', '你好世界!'],
-                    delay: 85,
+                  strings: ['Hello World!', '¡Hola Mundo!', '你好世界!', 'مرحبا بالعالم!'],
+                  delay: 100,
                     deleteSpeed: 50,
                     autoStart: true,
                     loop: true,
@@ -151,294 +163,407 @@ export default function Home() {
                     cursorClassName: styles.cursor
                   }}
               />  
-            </div>
-            <div style={{"display":"flex", "flex-wrap":"wrap", "justify-content":"center", "align-items":"center", "text-align":"center"}}>
-              <p className = {styles.iam}>I am</p>
-              <p className = {styles.vincent}> Vincent Guarnieri,</p>
-            </div>
-            <div style={{"display":"flex", "flex-wrap":"wrap", "justify-content":"center", "align-items":"center", "text-align":"center", "margin-top":"-10px"}}>
-              <p className = {styles.iam}>Software Engineer & AI Developer.</p>
-            </div>
-            <div className={styles.icons}>              
-              <a href="https://github.com/VinGuar?tab=repositories" target="_blank">
-                <img alt="github icon" className={styles.iconind} style ={{"width":"65px","opacity":"0.93"}} src="github.png" />
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", textAlign: "center", gap: "0.5rem"}}
+            >
+              <h1 className={styles.iam}>I am</h1>
+              <h1 className={styles.vincent}>Vincent Guarnieri</h1>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className={styles.roleTitle}
+            >
+              Software Engineer & AI Developer
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className={styles.icons}
+            >              
+              <a href="https://github.com/VinGuar?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <img alt="GitHub" className={styles.iconind} src="github.png" />
               </a>
-              <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank">
-                <img alt="linkedin icon" className={styles.iconind} style ={{"width": "53px", "opacity":"0.83"}} src="linked.png" />
+              <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank" rel="noopener noreferrer">
+                <img alt="LinkedIn" className={styles.iconind} src="linked.png" />
               </a>
-            </div>
-          </div>
-          <img alt="vincent surfing on keyboard" className={styles.imgtest} src="keyfly.png" style={{"margin-top":"0px"}} />
-
-        </section>
-
-
-        <section id = "About" className={styles.about}>
-
-
-
-          <div className={styles.aboutsections}>
-            <div className={styles.fixmargin} style ={{"margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>
-              <motion.div ref={refsec1} animate={{opacity: inViewsec1 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>          
-                <img alt="vincent as detective skills" src="detective.png" className={styles.aboutimgs} style={{"border-radius":"41px"}} />
-                <h1 className={styles.aboutheaders} >Skills</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Proficient in Python, SQL, RAG AI, NLP, JavaScript, Next.JS, HTML/CSS, Java, Git, Web Development, SEO, SCRUM, and machine learning technologies.</p>
               </motion.div>  
             </div>  
-            <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255)"}}>      
-              <motion.div ref={refsec2} animate={{opacity: inViewsec2 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "2" >          
-                <img alt="vincent presenting in meeting" src="desk.png" className={styles.aboutimgs} style={{"border-radius":"0px"}}/>
-                <h1 className={styles.aboutheaders}>Professional Interests</h1>
-                <div className={styles.aboutline}></div> 
-                <p className={styles.abouttext}>My primary passions lie in artificial intelligence development, software engineering, machine learning, data analysis, full-stack development, and building innovative technology solutions.</p>
-              </motion.div>
-            </div>
-            <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "margin-right": "1px", "outline": "1px solid rgb(150, 195, 255"}}>
-              <motion.div ref={refsec3} animate={{opacity: inViewsec3 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} id = "3">    
-                <img alt="vincent being curious" src="hm.png" className={styles.aboutimgs} />      
-                <h1 className={styles.aboutheaders}>Why These Interests?</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>I enjoy the above interests as they encompass three of my favorite things: creating, innovating, and problem-solving.</p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className={styles.aboutmain}>
-
-            <div className={styles.stick}>
-              <h1 className={styles.aboutmainword} style={{"color":"rgb(150, 195, 255)"}}>About Me!</h1>
-
-              <a href="resume.pdf" style ={{"align-items":"center"}}target="_blank">
-                <button  className={styles.buttonresume}>Résumé</button>
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div className={styles.aboutsections}>
-            <div className={styles.fixmargin} style ={{"outline": "1px solid rgb(181, 213, 255)"}}>      
-              <motion.div ref={refsec4} animate={{opacity: inViewsec4 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind}>    
-                <img alt="vincent with halo on" src="halo.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 44%"}} />      
-                <h1 className={styles.aboutheaders}>Values</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>I strive to live by four core values: treating others with kindness, practicing honesty, working as hard as I can, and finding joy in everything I do.</p>
-              </motion.div>
-            </div>
-            <div className={styles.fixmargin} style ={{"background-color": "rgb(45, 45, 45)", "outline": "1px solid rgb(150, 195, 255)"}}>      
-              <motion.div ref={refsec5} animate={{opacity: inViewsec5 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(45, 45, 45)"}}>    
-                <img alt="vincent playing basketball" src="ball.png" className={styles.aboutimgs} />      
-                <h1 className={styles.aboutheaders}>Hobbies and Pastimes</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>Just to list a few: I love sports, poker, indulging in delicious foods, appreciating nature&apos;s beauty, and cherishing time with friends and family!</p>
-              </motion.div>
-            </div>
-            <div className={styles.fixmargin} style ={{"background-color": "rgb(80, 80, 80)", "outline": "1px solid rgb(150, 195, 255)"}}>
-              <motion.div ref={refsec6} animate={{opacity: inViewsec6 ? 1 : 0}} transition={{duration: 0.7}} className={styles.aboutind} style ={{"background-color": "rgb(80, 80, 80)"}}>          
-                <img alt="puppy eyes dog and vincent" src="drop.png" className={styles.aboutimgs} style={{"border-radius":"0% 0% 34% 3%"}} />
-                <h1 className={styles.aboutheaders}>Why Me?</h1>
-                <div className={styles.aboutline}></div>
-                <p className={styles.abouttext}>I am a dedicated software engineer with proven experience in AI development, full-stack engineering, and product leadership. I consistently deliver high-quality solutions and excel in collaborative environments while continuously learning cutting-edge technologies.</p>
-              </motion.div>
-            </div>
-          </div>
-
         </section>
 
-        <section id = "Projects" className={styles.projects}>
+        {/* About Section */}
+        <section id="About" className={styles.about} ref={aboutRef}>
+          <div className={styles.aboutmain}>
+            <motion.h2 
+              className={styles.aboutmainword}
+              initial={{ opacity: 0, y: 30 }}
+              animate={aboutInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+            >
+              About Me
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={aboutInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                <button className={styles.buttonresume}>
+                  📄 Download Resume
+                </button>
+              </a>
+            </motion.div>
+            </div>
 
+          <motion.div 
+            className={styles.aboutsections}
+            variants={staggerContainer}
+            initial="hidden"
+            animate={aboutInView ? "visible" : "hidden"}
+          >
+            <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Skills icon" 
+                src="detective.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: 5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Technical Skills</h3>
+              <p className={styles.abouttext}>
+                Proficient in Python, SQL, RAG AI, NLP, JavaScript, Next.JS, HTML/CSS, Java, Git, Web Development, SEO, SCRUM, and machine learning technologies.
+              </p>
+            </motion.div>
 
+                        <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Professional experience icon" 
+                src="desk.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: 5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Professional Experience</h3>
+              <p className={styles.abouttext}>
+                Proven track record in software engineering, full-stack development, and product leadership across startups and established companies, with experience in AI integration and modern development practices.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Innovation icon" 
+                src="hm.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: 5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Innovation & Problem Solving</h3>
+              <p className={styles.abouttext}>
+                Passionate about creating cutting-edge solutions, building AI systems, and tackling complex technical challenges with creative approaches and modern technologies.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Values icon" 
+                src="halo.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: -5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Core Values</h3>
+              <p className={styles.abouttext}>
+                Committed to continuous learning, collaborative teamwork, delivering high-quality solutions, and staying at the forefront of AI and software engineering advances.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Personal interests icon" 
+                src="ball.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: -5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Personal Interests</h3>
+              <p className={styles.abouttext}>
+                Outside of work, I enjoy programming, software development, competitive poker, football, cooking, coding personal projects, and exploring artificial intelligence innovations.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
+              <motion.img 
+                alt="Why choose me icon" 
+                src="drop.png" 
+                className={styles.aboutimgs}
+                whileHover={{ rotate: -5, scale: 1.1 }}
+              />
+              <h3 className={styles.aboutheaders}>Why Work With Me?</h3>
+              <p className={styles.abouttext}>
+                I bring proven experience in AI development, full-stack engineering, and product leadership. I consistently deliver high-quality solutions and excel in collaborative environments while continuously learning cutting-edge technologies.
+              </p>
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="Projects" className={styles.projects} ref={projectsRef}>
           <div className={styles.projmain}>
-            <h1 className={styles.aboutmainword} style={{"padding-top":"38px", "padding-bottom":"50px", "text-align":"center", "color":"rgb(43, 45, 66)"}}>My Projects</h1>
+            <motion.h2 
+              className={styles.aboutmainword}
+              initial={{ opacity: 0, y: 30 }}
+              animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              style={{textAlign: "center", color: "white", paddingBottom: "2rem"}}
+            >
+              Featured Projects
+            </motion.h2>
 
             <div className={styles.projallsec}>
-
-              <motion.div ref={ref1} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView1 ? 0 : 180, opacity: inView1 ? 1 : 0}} transition={{type:"spring", duration: inView1 ? .8 : 0}} className={styles.projsecleft} style={{}} >
-
+              <motion.div 
+                className={styles.projsecleft}
+                initial={{ opacity: 0, x: -50 }}
+                animate={projectsInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover="hover"
+                variants={cardHover}
+              >
                 <div className={styles.projorder1}>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Fantasy Football Ranker</p>
-                  <p className={styles.projpara}>Python program that uses neural network machine learning (Scikit-learn) to rank NFL fantasy football players within their respective positions. Excluding injuries, has more accurate predictions than main human rankings or other popular computer algorithms.</p>
+                  <h3 style={{fontSize: "1.5rem", fontWeight: "700", color: "white", margin: "0 0 0.5rem 0"}}>
+                    Fantasy Football Ranker
+                  </h3>
+                  <p className={styles.projpara}>
+                    Python program that uses neural network machine learning (Scikit-learn) to rank NFL fantasy football players within their respective positions. Excluding injuries, has more accurate predictions than main human rankings or other popular computer algorithms.
+                  </p>
                 </div>  
-                <a className={styles.projorder2} href ="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target = "_blank">
-                  <button className={styles.buttonproj}>Click Me to View!</button>
+                <a href="https://github.com/VinGuar/Fantasy-Football-Rankings-With-ML" target="_blank" rel="noopener noreferrer">
+                  <button className={styles.buttonproj}>View Project</button>
                 </a>
-
               </motion.div>
 
-
-              <motion.div ref={ref2} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView2 ? 0 : 180, opacity: inView2 ? 1 : 0}} transition={{type:"spring", duration: inView2 ? 0.8 : 0}} className={styles.projsecright} style={{}}>
-
-                <a className={styles.projorder2} href ="https://www.recipematchmaker.com/" target="_blank">
-                  <button className={styles.buttonproj}>Click to See Site!</button>
+              <motion.div 
+                className={styles.projsecright}
+                initial={{ opacity: 0, x: 50 }}
+                animate={projectsInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover="hover"
+                variants={cardHover}
+              >
+                <a href="https://www.recipematchmaker.com/" target="_blank" rel="noopener noreferrer">
+                  <button className={styles.buttonproj}>Visit Website</button>
                 </a>
                 <div className={styles.projorder1}>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>Recipe Matchmaker Web App</p>
-                  <p className={styles.projpara}>Web application that tailors recipes to individuals&apos; ingredients, prep time, and preferences from almost 200,000 total recipes. Uses a Next.JS frontend and FastAPI backend to handle the data.</p>
+                  <h3 style={{fontSize: "1.5rem", fontWeight: "700", color: "white", margin: "0 0 0.5rem 0"}}>
+                    Recipe Matchmaker Web App
+                  </h3>
+                  <p className={styles.projpara}>
+                    Web application that tailors recipes to individuals' ingredients, prep time, and preferences from almost 200,000 total recipes. Uses a Next.JS frontend and FastAPI backend to handle the data.
+                  </p>
                 </div>
-
               </motion.div>
               
-              
-              <motion.div ref={ref3} initial={{opacity:0}} hidden={{rotate: 0, opacity:0}} animate={{ rotate: inView3 ? 0 : 180, opacity: inView3 ? 1 : 0}} transition={{type:"spring", duration: inView3 ? 0.8 : 0}} className={styles.projsecleft} style={{}}>
-
-                <div>
-                  <p className={styles.projpara} style={{"border-bottom":"none", "margin-bottom":"-15px", "font-weight":"bold", "font-size":"25px", "color":"rgb(10, 36, 99)"}}>NBA Player Grader</p>
-                  <p className={styles.projpara}>Python program that uses ridge regression machine learning (Scikit-learn) and feature engineering to find which NBA stats predict wins best and then grades current/past NBA players. Has a very strong correlation between high player grades and high team win totals.</p>
+              <motion.div 
+                className={styles.projsecleft}
+                initial={{ opacity: 0, x: -50 }}
+                animate={projectsInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                whileHover="hover"
+                variants={cardHover}
+              >
+                <div className={styles.projorder1}>
+                  <h3 style={{fontSize: "1.5rem", fontWeight: "700", color: "white", margin: "0 0 0.5rem 0"}}>
+                    NBA Player Grader
+                  </h3>
+                  <p className={styles.projpara}>
+                    Python program that uses ridge regression machine learning (Scikit-learn) and feature engineering to find which NBA stats predict wins best and then grades current/past NBA players. Has a very strong correlation between high player grades and high team win totals.
+                  </p>
                 </div>  
-                <a href ="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target='_blank'>
-                  <button className={styles.buttonproj}>Click Me to View!</button>
+                <a href="https://github.com/VinGuar/NBA-Player-Grader-With-ML" target="_blank" rel="noopener noreferrer">
+                  <button className={styles.buttonproj}>View Project</button>
                 </a>
-
-
               </motion.div>
-                
             </div>
-
           </div>
         </section>
 
-        <section id = "Experience" className={styles.experience}>
+        {/* Experience Section */}
+        <section id="Experience" className={styles.experience} ref={experienceRef}>
+          <motion.h2 
+            className={styles.aboutmainword}
+            initial={{ opacity: 0, y: 30 }}
+            animate={experienceInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            style={{textAlign: "center", color: "white", paddingBottom: "2rem"}}
+          >
+            Professional Experience
+          </motion.h2>
 
-          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(220,220,220)", "padding-bottom":"25px", "text-align":"center"}}>Experience</h1>
-
-          <div className={styles.dotsmobile} style={{"display":"flex", "justify-content":"center", "padding-top":"0px"}}>
-              <span onClick={() => currentSlide(1)} className={isOnbt1 ? styles.dot : styles.activeBt}></span> 
-              <span onClick={() => currentSlide(2)} className={isOnbt2 ? styles.dot : styles.activeBt}></span> 
-              <span onClick={() => currentSlide(3)} className={isOnbt3 ? styles.dot : styles.activeBt}></span> 
-              <span onClick={() => currentSlide(4)} className={isOnbt4 ? styles.dot : styles.activeBt}></span> 
-          </div>
           <div className={styles.experiencemain}>
+            {/* Navigation dots */}
+            <div className={styles.dotsmobile}>
+              {[1, 2, 3, 4, 5].map((num) => (
+                <span 
+                  key={num}
+                  onClick={() => goToExperience(num)} 
+                  className={currentExperience === num ? styles.activeBt : styles.dot}
+                />
+              ))}
+            </div>
+
+            {/* Navigation arrows */}
             <div className={styles.centerarrow}>
-              <div className={styles.arrowsdiv1} style={{"margin-right":"70px"}} onClick={() => plusSlides(-1)}>
+              <div className={styles.arrowsdiv1} onClick={prevExperience}>
                 <div className={styles.leftarrow}></div>
-                <p className={styles.oldnew}>Older</p>
+                <p className={styles.oldnew}>Previous</p>
               </div>
 
-              <div className={styles.arrowsdiv2mobile} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
+              <div className={styles.arrowsdiv2} onClick={nextExperience}>
                 <div className={styles.rightarrow}></div>
-                <p className={styles.oldnew}>Newer</p>
+                <p className={styles.oldnew}>Next</p>
               </div>
             </div>
 
+                        {/* Experience cards */}
             <div className={styles.expsections}>
+              {experiences.map((exp) => (
+                <motion.div 
+                  key={exp.id}
+                  className={currentExperience === exp.id ? styles.indexpsec : styles.sechide}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {exp.link ? (
+                    <a href={exp.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
+                      <h3 className={styles.expheader}>{exp.company}</h3>
+                    </a>
+                  ) : (
+                    <h3 className={styles.expheader}>{exp.company}</h3>
+                  )}
+                  
+                  {exp.isCurrent && (
+                    <p style={{textAlign: "center", marginTop: "-0.5rem", color: "#00D4FF", fontSize: "0.9rem"}}>
+                      (current position)
+                    </p>
+                  )}
+                  
+                  {exp.isOldest && (
+                    <p style={{textAlign: "center", marginTop: "-0.5rem", color: "#A0A5B8", fontSize: "0.9rem"}}>
+                      (first position)
+                    </p>
+                  )}
 
-              <div ref={(el) => (slidesRef.current[1] = el)} className={isOn1 ? styles.indexpsec : styles.sechide}>
-                <a style={{"text-decoration":"none"}} href="https://www.jamesriverequipment.com/" target="_blank">
-                  <h1 className={styles.expheader} >James River Equipment</h1>
-                </a>
-                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(oldest)</h3>
-                <div className={styles.timeline}>
-                  <div className={styles.line}>
-                  </div>
-                  <div style={{"display":"flex", "flex-direction":"column"}}>
-                    <div>
-                      <h3 className={styles.expminiheaders}>Information Technology Intern</h3>
-                      <h5 className={styles.date}>05/22 - 08/22</h5>
-                      <p className={styles.exppara}>Worked in a team as help desk for company employees&apos; software and hardware problems. Imaged and set up computers for employees.</p>
-                    </div>
-                  </div>
-                </div>           
-              </div>
-              
-              <div ref={(el) => (slidesRef.current[2] = el)} className={isOn2 ? styles.indexpsec : styles.sechide}>
-                <a style={{"text-decoration":"none"}}  href="https://www.scribeondemand.com/" target="_blank">
-                  <h1 className={styles.expheader}>Scribe On Demand</h1>
-                </a>
-                <div className={styles.timeline}>
-                  <div className={styles.line}></div>
-                  <div style={{"display":"flex", "flex-direction":"column"}}>
-                    <div>
-                      <h3 className={styles.expminiheaders}>Web Developer and Digital Marketer</h3>
-                      <h5 className={styles.date}>06/20 - 05/25</h5>
-                      <p className={styles.exppara}>Built, developed, and designed company website. Helped both Scribe and its clientele with personalized SEO reports and digital marketing.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div ref={(el) => (slidesRef.current[3] = el)} className={isOn3 ? styles.indexpsec : styles.sechide}>
-                <a style={{"text-decoration":"none"}} href="https://bigstack.io" target="_blank">
-                  <h1 className={styles.expheader}>BigStack Poker</h1>
-                </a>
                 <div className={styles.timeline}>
                   <div className={styles.line}></div>
-                  <div style={{"display":"flex", "flex-direction":"column"}}>
                     <div>
-                      <h3 className={styles.expminiheaders}>Co-Founder and CTO</h3>
-                      <h5 className={styles.date}>04/25 - Present</h5>
-                      <p className={styles.exppara}>Co-founded AI-powered poker coaching platform. Designed and implemented AI conversational agent using NLP and solver-backed analytics. Led end-to-end product development lifecycle.</p>
+                      <h4 className={styles.expminiheaders}>{exp.role}</h4>
+                      <p className={styles.date}>
+                        {exp.period}
+                        {exp.location && (
+                          <span style={{color: "#A0A5B8", marginLeft: "0.5rem"}}>• {exp.location}</span>
+                        )}
+                      </p>
+                      
+                      {exp.description && (
+                        <p className={styles.exppara} style={{fontStyle: "italic", marginBottom: "1rem"}}>
+                          {exp.description}
+                        </p>
+                      )}
+                      
+                      {exp.isSimple ? null : (
+                        <ul style={{
+                          listStyleType: "disc", 
+                          paddingLeft: "1.5rem", 
+                          margin: "0.5rem 0 0 1.5rem",
+                          color: "#A0A5B8"
+                        }}>
+                          {exp.bullets.map((bullet, index) => (
+                            <li key={index} style={{
+                              marginBottom: "0.5rem",
+                              lineHeight: "1.6"
+                            }}>
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div ref={(el) => (slidesRef.current[4] = el)} className={isOn4 ? styles.indexpsec : styles.sechide}>
-                <h1 className={styles.expheader}>Respondr</h1>
-                <h3 style={{"text-align":"center", "margin-top":"-7px", "color":"rgb(150,150,150)"}}>(current)</h3>
-                <div className={styles.timeline}>
-                  <div className={styles.line}></div>
-                  <div style={{"display":"flex", "flex-direction":"column"}}>
-                    <div>
-                      <h3 className={styles.expminiheaders}>AI Developer and Data Analyst Intern</h3>
-                      <h5 className={styles.date}>05/25 - Present</h5>
-                      <p className={styles.exppara}>Developed RAG-based AI chatbot using LLMs for crisis-response automation. Performed data preprocessing, embedding, and vectorization using SQL databases. Collaborated in Agile/Scrum team.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-            <div className={styles.arrowsdiv2} style={{"margin-left":"70px"}} onClick={() => plusSlides(1)}>
-              <div className={styles.rightarrow}></div>
-              <p className={styles.oldnew}>Newer</p>
+                </motion.div>
+              ))}
             </div>
           </div>  
-
-
         </section>
 
-        <section id = "Education" className={styles.education}>
-          <h1 className={styles.aboutmainword} style={{"padding-top":"80px", "color":"rgb(40,40,40)", "padding-bottom":"80px", "text-align":"center"}}>Education</h1>
-          <div className={styles.timeline2} style={{"padding-bottom":"75px", "padding-left":"40px", "padding-right":"40px"}}>
-            <div className={styles.lineeducation}>
-            </div>
-            <div className={styles.paraboxtime} style={{"padding-right":"0px"}}>
-              <div className={styles.educbox}>
-                                  <div className={styles.educationpara}>
-                      <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>University Of Virginia</h1>
-                      <p className={styles.projpara2} style={{"font-size":"19px", "color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "margin-bottom":"0px", "padding-bottom":"20px", "font-weight":"bold", "padding-left": "20px"}}>Current UVA student - GPA: 3.7</p>
-                      <p className={styles.projpara2} style={{"color":"rgb(210, 110, 0)", "max-width":"420px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-left": "20px", "padding-right":"50px"}}> Pursuing a B.A. in Computer Science and Applied Statistics, expected graduation May 2027.</p>
-                </div>
-                <div>
-                <a href="https://www.virginia.edu/" target="_blank">
-                    <img alt="uva logo" src="uva.png" className={styles.schoolpics}></img>
-                </a>               
-                </div>
-              </div>
+        {/* Education Section */}
+        <section id="Education" className={styles.education} ref={educationRef}>
+          <motion.h2 
+            className={styles.aboutmainword}
+            initial={{ opacity: 0, y: 30 }}
+            animate={educationInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            style={{textAlign: "center", color: "white", paddingBottom: "3rem"}}
+          >
+            Education
+          </motion.h2>
 
-              <div className={styles.educbox}>
+          <motion.div 
+            className={styles.timeline2}
+            initial={{ opacity: 0, y: 30 }}
+            animate={educationInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className={styles.lineeducation}></div>
+            <div className={styles.paraboxtime}>
+              <motion.div 
+                className={styles.educbox}
+                whileHover="hover"
+                variants={cardHover}
+              >
                 <div className={styles.educationpara}>
-                      <h1 className={styles.educminiheaders} style={{"color":"rgb(5, 0, 130)"}}>Deep Run High School</h1>
-                      <h2 style={{"color":"rgb(40, 40, 40)", "max-width":"420px", "font-size":"19px", "font-weight":"bold", "padding-left": "20px"}}>Center for Information Technology</h2>
-                      <p className={styles.projpara2} style={{"max-width":"420px", "color":"rgb(40, 40, 40)", "padding-left": "20px", "border-bottom":"none", "border-color":"rgb(5, 0, 130)", "margin-top":"0px", "padding-right":"50px"}}> Graduated in 2023 with a focus in Information Technology, was rank 11/492 in my class.</p>
+                  <h3 className={styles.educminiheaders}>University of Virginia</h3>
+                  <p style={{fontSize: "1.1rem", color: "#FF6B35", fontWeight: "600", margin: "0.5rem 0"}}>
+                    Current Student - GPA: 3.7
+                  </p>
+                  <p className={styles.projpara2}>
+                    Pursuing a B.A. in Computer Science and Applied Statistics, expected graduation May 2027. 
+                    Focused on AI/ML coursework and software engineering fundamentals.
+                  </p>
                 </div>
-                <div>
-                <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank">
-                    <img alt="deep run logo" src="dr.png" className={styles.schoolpics}></img>
+                <a href="https://www.virginia.edu/" target="_blank" rel="noopener noreferrer">
+                  <img alt="UVA logo" src="uva.png" className={styles.schoolpics} />
                 </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+              </motion.div>
 
+              <motion.div 
+                className={styles.educbox}
+                whileHover="hover"
+                variants={cardHover}
+              >
+                <div className={styles.educationpara}>
+                  <h3 className={styles.educminiheaders}>Deep Run High School</h3>
+                  <p style={{fontSize: "1.1rem", color: "#FF6B35", fontWeight: "600", margin: "0.5rem 0"}}>
+                    Center for Information Technology
+                  </p>
+                  <p className={styles.projpara2}>
+                    Graduated in 2023 with a focus in Information Technology. Ranked 11/492 in class with strong academic performance in STEM subjects.
+                  </p>
+                </div>
+                <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank" rel="noopener noreferrer">
+                  <img alt="Deep Run logo" src="dr.png" className={styles.schoolpics} />
+                </a>
+              </motion.div>
+                </div>
+          </motion.div>
+        </section>
 
       </div>
       <Footer />
-
     </main>
   )
 }
