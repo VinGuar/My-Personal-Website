@@ -191,10 +191,10 @@ export default function Home() {
               className={styles.icons}
             >              
               <a href="https://github.com/VinGuar?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img alt="GitHub" className={styles.iconind} src="github.png" />
+                <Image alt="GitHub" className={styles.iconind} src="/github.png" width={48} height={48} />
               </a>
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank" rel="noopener noreferrer">
-                <img alt="LinkedIn" className={styles.iconind} src="linked.png" />
+                <Image alt="LinkedIn" className={styles.iconind} src="/linked.png" width={48} height={48} />
               </a>
               </motion.div>  
             </div>  
@@ -268,7 +268,7 @@ export default function Home() {
               <p className={styles.abouttext}>
                 Passionate about creating cutting-edge solutions, building AI systems, and tackling complex technical challenges with creative approaches and modern technologies.
               </p>
-            </motion.div>
+              </motion.div>
 
             <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
               <motion.img 
@@ -281,7 +281,7 @@ export default function Home() {
               <p className={styles.abouttext}>
                 Committed to continuous learning, collaborative teamwork, delivering high-quality solutions, and staying at the forefront of AI and software engineering advances.
               </p>
-            </motion.div>
+              </motion.div>
 
             <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
               <motion.img 
@@ -294,7 +294,7 @@ export default function Home() {
               <p className={styles.abouttext}>
                 Outside of work, I enjoy programming, software development, competitive poker, football, cooking, coding personal projects, and exploring artificial intelligence innovations.
               </p>
-            </motion.div>
+              </motion.div>
 
             <motion.div variants={fadeInUp} whileHover="hover" className={styles.aboutind}>
               <motion.img 
@@ -362,7 +362,7 @@ export default function Home() {
                     Recipe Matchmaker Web App
                   </h3>
                   <p className={styles.projpara}>
-                    Web application that tailors recipes to individuals' ingredients, prep time, and preferences from almost 200,000 total recipes. Uses a Next.JS frontend and FastAPI backend to handle the data.
+                    Web application that tailors recipes to individuals&apos; ingredients, prep time, and preferences from almost 200,000 total recipes. Uses a Next.JS frontend and FastAPI backend to handle the data.
                   </p>
                 </div>
               </motion.div>
@@ -536,7 +536,7 @@ export default function Home() {
                   </p>
                 </div>
                 <a href="https://www.virginia.edu/" target="_blank" rel="noopener noreferrer">
-                  <img alt="UVA logo" src="uva.png" className={styles.schoolpics} />
+                  <Image alt="UVA logo" src="/uva.png" className={styles.schoolpics} width={80} height={80} />
                 </a>
               </motion.div>
 
@@ -555,7 +555,7 @@ export default function Home() {
                   </p>
                 </div>
                 <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank" rel="noopener noreferrer">
-                  <img alt="Deep Run logo" src="dr.png" className={styles.schoolpics} />
+                  <Image alt="Deep Run logo" src="/dr.png" className={styles.schoolpics} width={80} height={80} />
                 </a>
               </motion.div>
                 </div>
