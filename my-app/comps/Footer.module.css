@@ -70,7 +70,6 @@
 .iconfooter {
   width: 48px;
   height: 48px;
-  filter: brightness(0) invert(10);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 12px;
   padding: 8px;
@@ -82,7 +81,6 @@
 }
 
 .iconfooter:hover {
-  filter: brightness(0) invert(10);
   transform: translateY(-4px);
   background: rgba(0, 102, 255, 0.1);
   border-color: #0066FF;

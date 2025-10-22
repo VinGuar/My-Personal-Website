@@ -191,10 +191,30 @@ export default function Home() {
               className={styles.icons}
             >              
               <a href="https://github.com/VinGuar?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <Image alt="GitHub" className={styles.iconind} src="/github.png" width={48} height={48} />
+                <div className={styles.iconind} style={{
+                  background: 'white',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '24px',
+                  fontWeight: 'bold',
+                  color: 'black'
+                }}>
+                  GH
+                </div>
               </a>
               <a href="https://www.linkedin.com/in/vincent-guarnieri-5343a8278/" target="_blank" rel="noopener noreferrer">
-                <Image alt="LinkedIn" className={styles.iconind} src="/linked.png" width={48} height={48} />
+                <div className={styles.iconind} style={{
+                  background: '#0077B5',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '24px',
+                  fontWeight: 'bold',
+                  color: 'white'
+                }}>
+                  in
+                </div>
               </a>
               </motion.div>  
             </div>  

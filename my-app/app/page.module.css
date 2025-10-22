@@ -99,7 +99,6 @@
 .iconind {
   width: 48px;
   height: 48px;
-  filter: brightness(0) invert(10);
   transition: var(--transition);
   border-radius: 12px;
   padding: 8px;
@@ -108,7 +107,6 @@
 }
 
 .iconind:hover {
-  filter: brightness(0) invert(1);
   transform: translateY(-4px);
   box-shadow: var(--shadow-glow);
   background: rgba(0, 102, 255, 0.1);
